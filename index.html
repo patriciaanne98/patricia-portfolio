@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patricia Frogoso | Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricia Frogoso | Designer & Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="nav">
     <div class="nav-logo">
-      <a href="#">Patricia Frogoso</a><span class="logo-sub">designer</span>
+      <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
     </div>
     <nav class="nav-links">
       <a href="#">HOME</a>
@@ -20,52 +20,96 @@
     </nav>
   </header>
 
+  <!-- Hero Section with Two Images -->
   <section class="hero">
     <h1>Designer + Developer</h1>
     <p>Crafting brand-driven digital experiences with purpose and personality.</p>
   </section>
-
-  <section id="work" class="projects">
-    <div class="project">
-      <h2>NFT Marketplace</h2>
-      <p>A bold, modern gateway into Web3 culture.</p>
+  <section class="hero-duo">
+    <div class="duo-left">
+      <h3>Branding + Web Design</h3>
+      <h2>I create interactive experiences<br>with identity and purpose.</h2>
+      <p>Design that speaks — development that performs. Let’s make magic that moves people.</p>
     </div>
-    <div class="project">
-      <h2>Pilates with Patricia</h2>
-      <p>Movement meets mindful design.</p>
-    </div>
-    <div class="project">
-      <h2>Restaurant Menu</h2>
-      <p>Print design reimagined with a digital eye.</p>
-    </div>
-    <div class="project">
-      <h2>Visual Identity</h2>
-      <p>Simplicity that speaks volumes.</p>
-    </div>
-    <div class="project">
-      <h2>Echoes of Silence</h2>
-      <p>Where emotion meets technology.</p>
-    </div>
-    <div class="project">
-      <h2>Flora</h2>
-      <p>A botanical UI study in balance and beauty.</p>
+    <div class="duo-right">
+      <img src="assets/img/design-bg-1.avif" alt="Patricia at work">
     </div>
   </section>
+  
+  <!-- Services Section -->
+  <section class="services-split">
+    <div class="services-left">
+      <h2>My Services</h2>
+      <p>I help brands bring ideas to life through strategy, storytelling, and seamless digital design.</p>
+    </div>
+    <div class="services-right">
+      <ul>
+        <li>Web Design</li>
+        <li>Branding</li>
+        <li>Creative Direction</li>
+        <li>Illustrations</li>
+        <li>UX/UI</li>
+        <li>Product Design</li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <!-- Carousel Section -->
+  <section class="carousel-section">
+    <h2 class="carousel-title"> Art Projects</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn left" onclick="scrollCarousel(-1)">❮</button>
+  
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-card">
+          <img src="assets/img/miyazaki.png" alt="Project 3">
+          <h3>Hayao Miyazaki</h3>
+          <p>Creative Direction + Strategy </p>
+        </div>
+        <div class="carousel-card">
+          <img src="assets/img/her.png" alt="Project 4">
+          <h3>Her</h3>
+          <p> Creative Direction + Balance </p>
+        </div>
+        <div class="carousel-card">
+          <img src="assets/img/AttackonTitan.png" alt="Project 5">
+          <h3>Attack on Titan</h3>
+          <p>Digital Design + Illustrations</p>
+        </div>
+        <div class="carousel-card">
+          <img src="assets/img/makoto.png" alt="Project 6">
+          <h3>Makoto</h3>
+          <p>Digital Art + Illustrations</p>
+        </div>
+        <div class="carousel-card">
+          <img src="assets/img/naruto2.jpg" alt="Project 1">
+          <h3>Naruto</h3>
+          <p> Digital Design + Illustrations </p>
+        </div>
+        <div class="carousel-card">
+          <img src="assets/img/shadow-hope.png" alt="Project 2">
+          <h3>Shadow Hope</h3>
+          <p>Digital Design + Illustrations </p>
+        </div>
+      </div>
+  
+      <button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>
+    </div>
+  </section>  
 
   <footer class="footer">
     <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
   </footer>
-
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-        }
+    function scrollCarousel(direction) {
+      const track = document.getElementById('carouselTrack');
+      const scrollAmount = 340; // width of card + gap
+      track.scrollBy({
+        left: scrollAmount * direction,
+        behavior: 'smooth'
       });
-    });
-
-    document.querySelectorAll(".project").forEach((el) => observer.observe(el));
-  </script>
+    }
+  </script>   
 </body>
 </html>
