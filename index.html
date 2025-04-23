@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patricia Frogoso | Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-logo">
+      <a href="#">Patricia Frogoso</a><span class="logo-sub">designer</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Designer + Developer</h1>
+    <p>Crafting brand-driven digital experiences with purpose and personality.</p>
+  </section>
+
+  <section id="work" class="projects">
+    <div class="project">
+      <h2>NFT Marketplace</h2>
+      <p>A bold, modern gateway into Web3 culture.</p>
+    </div>
+    <div class="project">
+      <h2>Pilates with Patricia</h2>
+      <p>Movement meets mindful design.</p>
+    </div>
+    <div class="project">
+      <h2>Restaurant Menu</h2>
+      <p>Print design reimagined with a digital eye.</p>
+    </div>
+    <div class="project">
+      <h2>Visual Identity</h2>
+      <p>Simplicity that speaks volumes.</p>
+    </div>
+    <div class="project">
+      <h2>Echoes of Silence</h2>
+      <p>Where emotion meets technology.</p>
+    </div>
+    <div class="project">
+      <h2>Flora</h2>
+      <p>A botanical UI study in balance and beauty.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    });
+
+    document.querySelectorAll(".project").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
