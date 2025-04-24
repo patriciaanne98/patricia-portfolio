@@ -242,8 +242,8 @@ h1, h2 {
 
 .carousel-card {
   flex: 0 0 auto;
-  width: 460px;
-  height: auto;
+  width: 380px;
+  height: 420px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05);
@@ -252,8 +252,8 @@ h1, h2 {
 }
 
 .carousel-card img {
-  width: 90%;
-  height: 78%;
+  width: 100%;
+  height: 80%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
