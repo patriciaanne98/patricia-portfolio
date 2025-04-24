@@ -242,8 +242,8 @@ h1, h2 {
 
 .carousel-card {
   flex: 0 0 auto;
-  width: 380px;
-  height: 420px;
+  width: 450px;
+  height: 470px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05);
@@ -446,8 +446,8 @@ h1, h2 {
   }
   
   .project-image img {
-    width: 800px;
-    height: 580px;
+    width: 840px;
+    height: 615px;
     border-radius: 12px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
     object-fit: cover;
@@ -573,6 +573,18 @@ h1, h2 {
     color: #fff;
   }
 
+/* Hide hamburger by default on desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+/* Default desktop nav-links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
 
 
 
@@ -590,12 +602,34 @@ h1, h2 {
 
 
 
-
-  /* Media Queries */
   @media (max-width: 768px) {
     .nav {
       flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: 10px;
+    }
+  
+    .hero {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+      max-width: 90%;
+      margin: 0 auto;
     }
   
     .hero-duo {
@@ -603,7 +637,8 @@ h1, h2 {
       height: auto;
     }
   
-    .duo-left, .duo-right {
+    .duo-left,
+    .duo-right {
       width: 100%;
       height: auto;
     }
@@ -611,52 +646,98 @@ h1, h2 {
     .duo-right img {
       width: 100%;
       height: auto;
-    }  
+      object-fit: cover;
+    }
   
     .about-hero {
       grid-template-columns: 1fr;
       text-align: center;
+      padding: 60px 20px;
     }
   
     .about-text-left h1 {
-      font-size: 2.8rem;
+      font-size: 2.2rem;
     }
   
-    .about-text-right p {
-      font-size: 1.1rem;
+    .about-text-right {
+      gap: 10px;
     }
   
     .about-photo img {
+      width: 100%;
+      height: auto;
       margin: 0 auto;
     }
   
     .project-showcase {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 30px;
+      padding: 40px 20px;
     }
   
     .portfolio-hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
+      text-align: center;
     }
+  
     .contact-wrapper {
-        grid-template-columns: 1fr;
-        padding: 60px 20px;
-      }
-      .input-group {
-        flex-direction: column;
-      }
-      .contact-left h1 {
-        font-size: 2.5rem;
-        text-align: center;
-      }
-      .contact-left p,
-      .cta-button {
-        text-align: center;
-        display: block;
-        margin: 0 auto;
-      }
-      .contact-form button {
-        align-self: center;
-      }
+      grid-template-columns: 1fr;
+      padding: 60px 20px;
+    }
+  
+    .input-group {
+      flex-direction: column;
+    }
+  
+    .contact-left h1 {
+      font-size: 2.3rem;
+      text-align: center;
+    }
+  
+    .contact-left p,
+    .cta-button {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .contact-form button {
+      align-self: center;
+    }
+
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 28px;
+      right: 40px;
+      z-index: 999;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 60px;
+      background: #fdfdfd;
+      padding: 20px 40px;
+      border-top: 1px solid #eee;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links a {
+      padding: 10px 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      position: relative;
+    }
   }
   

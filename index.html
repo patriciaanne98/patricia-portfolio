@@ -12,6 +12,7 @@
     <div class="nav-logo">
       <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <nav class="nav-links">
       <a href="#">HOME</a>
       <a href="portfolio.html">PORTFOLIO</a>
@@ -73,6 +74,16 @@
           <p> UX/UI + Product Design + Mobile </p>
         </div>
         <div class="carousel-card">
+          <img src="assets/img/Screenshot 2025-04-24 at 12.47.43 AM.png" alt="Project 1">
+          <h3>Whisked</h3>
+          <p> Digital Design + Illustrations + Menu </p>
+        </div>
+        <div class="carousel-card">
+          <img src="assets/img/futuredesign.jpg" alt="Project 2">
+          <h3>future</h3>
+          <p> Art Directory + Visual Design + Typography </p>
+        </div>
+        <div class="carousel-card">
           <img src="assets/img/Frame 1-2.png" alt="Project 5">
           <h3>RoverX</h3>
           <p> Animations + Web Design </p>
@@ -82,18 +93,7 @@
           <h3>Adobe Firefly</h3>
           <p>Branding + Digital Design </p>
         </div>
-        <div class="carousel-card">
-          <img src="assets/img/whisked.png" alt="Project 1">
-          <h3>Whisked</h3>
-          <p> Digital Design + Illustrations + Menu </p>
-        </div>
-        <div class="carousel-card">
-          <img src="assets/img/shadow-hope.png" alt="Project 2">
-          <h3>Shadow Hope</h3>
-          <p>Digital Design + Illustrations </p>
-        </div>
       </div>
-  
       <button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>
     </div>
   </section>  
@@ -110,6 +110,13 @@
         behavior: 'smooth'
       });
     }
-  </script>   
+  </script>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
