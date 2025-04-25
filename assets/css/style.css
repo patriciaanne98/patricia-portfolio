@@ -756,7 +756,7 @@ section {
       .duo-left h2 {
         font-size: 2.2rem;
         font-family: 'Playfair Display', serif;
-        line-height: 1.3;
+        line-height: .5;
         margin-bottom: 20px;
       }
       
