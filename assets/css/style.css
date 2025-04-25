@@ -972,6 +972,7 @@ section {
     
       .contact-form button {
         align-self: center;
+        background-color: #000;
       }
     }    
   }
