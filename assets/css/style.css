@@ -881,7 +881,7 @@ section {
       }
       
         .project-image img {
-          max-width: 90%;
+          max-width: 100%;
           height: auto;
           margin: 0 auto;
         }
