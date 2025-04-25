@@ -27,18 +27,18 @@
     <h1>My Work</h1>
     <p class="portfolio-tags">Web Design · Branding · UX/UI · Product Design</p>
   </section>
-
   <section class="project-showcase">
     <div class="project-text">
-      <h2>echosync</h2>
-      <p class="project-tags">Branding · Product Design · UX/UI</p>
-      <p class="project-desc">Revitilizing collaboration through a cohesive digital experience.</p>
-    </div>
-    <div class="project-image">
-      <img src="assets/img/studio-2.png" alt="echosync Project Screenshot">
-    </div>
-  </section>
-
+        <h2>echosync</h2>
+        <p class="project-tags">Branding · Product Design · UX/UI</p>
+        <p class="project-desc">Revitalizing collaboration through a cohesive digital experience.</p>
+        </div>
+      <div class="project-image">
+        <a href="echosync.html" class="project-link">
+        <img src="assets/img/studio-8.png" alt="echosync Case Study Thumbnail">
+      </div>
+    </a>
+</section>
   <section class="project-showcase">
     <div class="project-text">
       <h2>Flora</h2>
@@ -46,8 +46,10 @@
       <p class="project-desc">A botanical UI study blending elegance and usability through soft motion and clean visual storytelling.</p>
     </div>
     <div class="project-image">
+      <a href="flora.html" class="project-link">
       <img src="assets/img/Flora.jpg" alt="Flora Project Screenshot">
     </div>
+  </a>
   </section>
 
   <section class="project-showcase">
@@ -57,8 +59,10 @@
       <p class="project-desc">An AI-powered reflection tool that empowers users to express emotions through micro-interactions and mindful prompts.</p>
     </div>
     <div class="project-image">
+      <a href="echo.html" class="project-link">
       <img src="assets/img/Echoes of Silence.png" alt="Echoes of Silence Screenshot">
     </div>
+  </a>
   </section>
   <section class="project-showcase">
     <div class="project-text">
@@ -67,8 +71,10 @@
       <p class="project-desc">A conceptual fashion collection blending minimalism with modern identity. </p>
     </div>
     <div class="project-image">
+      <a href="future.html" class="project-link">
       <img src="assets/img/futuredesign.jpg" alt="future Design Screenshot">
     </div>
+  </a>
   </section>
   <section class="project-showcase">
     <div class="project-text">
@@ -77,8 +83,10 @@
       <p class="project-desc">A bold, citrus-inspired vitamin C supplement brought to life through vibrant visual branding and packaging design.</p>
     </div>
     <div class="project-image">
+      <a href="tange.html" class="project-link">
       <img src="assets/img/Group 2.png" alt="TANGÉ Screenshot">
     </div>
+    </a>
   </section>
   <section class="project-showcase">
     <div class="project-text">
@@ -87,12 +95,25 @@
       <p class="project-desc">A thoughtfully curated deli menu designed to spotlight Whisked’s handcrafted sandwiches and cozy café vibes.</p>
     </div>
     <div class="project-image">
+      <a href="whisked.html" class="project-link">
       <img src="assets/img/Screenshot 2025-04-24 at 12.47.43 AM.png" alt="Whisked Screenshot">
     </div>
+  </a>
   </section>
   <footer class="footer">
     <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
   </footer>
+  <script>
+    function scrollCarousel(direction) {
+      const track = document.getElementById('carouselTrack');
+      const scrollAmount = 340; // width of card + gap
+      track.scrollBy({
+        left: scrollAmount * direction,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+  
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById("navLinks");

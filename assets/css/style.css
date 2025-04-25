@@ -586,9 +586,26 @@ h1, h2 {
   gap: 30px;
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
 
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
 
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
 
+.project-card a:hover {
+  transform: scale(1.02);
+}
 
 
 

@@ -50,6 +50,17 @@
     <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
   </footer>
   <script>
+    function scrollCarousel(direction) {
+      const track = document.getElementById('carouselTrack');
+      const scrollAmount = 340; // width of card + gap
+      track.scrollBy({
+        left: scrollAmount * direction,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+  
+  <script>
     function toggleMenu() {
       const navLinks = document.getElementById("navLinks");
       navLinks.classList.toggle("active");

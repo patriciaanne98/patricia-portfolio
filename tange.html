@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricia Frogoso | Designer & Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tange.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-logo">
+      <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="case-hero">
+    <img src="assets/img/Group 2.png" alt="Tange Hero" class="hero-img">
+  </section>
+
+  <section class="case-title-section">
+  <div class="case-title-section">
+    <h1>TANGÉ</h1>
+  </div>
+</section>
+  <!-- Project Details -->
+  <section class="case-details">
+    <div class="case-left">
+      <h3>Client</h3>
+      <p>TANGÉ</p>
+      <h3>Location</h3>
+      <p>Remote</p>
+      <h3>Deliverables</h3>
+      <p>Branding, Illustrations, Strategy </p>
+    </div>
+    <div class="case-right">
+      <p>TANGÉ is a vitamin C wellness supplement brand designed to bring playful energy and elevated simplicity to daily self-care. I created a full visual identity system including logo, packaging, color palette, and digital assets tailored for a modern wellness audience.</p>
+
+    </div>
+  </section>
+
+
+  <!-- Showcase Section -->
+<section class="case-images">
+    <div class="split-showcase">
+      <div class="left-panel">
+        <img src="assets/img/Group 1.jpg" alt="EchoSync Web Design">
+      </div>
+      <div class="right-panel">
+        <img src="assets/img/Group 2.png" alt="EchoSync UI Mobile">
+      </div>
+    </div>
+  </section>
+
+  <section class="case-images">
+    <div class="split-showcase">
+      <div class="left-panel">
+        <img src="assets/img/Group 3.png" alt="EchoSync Web Design">
+      </div>
+      <div class="right-panel">
+        <img src="assets/img/Group .png" alt="EchoSync UI Mobile">
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Patricia Frogoso. All rights reserved.</p>
+  </footer>
+  <script>
+    function scrollCarousel(direction) {
+      const track = document.getElementById('carouselTrack');
+      const scrollAmount = 340; // width of card + gap
+      track.scrollBy({
+        left: scrollAmount * direction,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
