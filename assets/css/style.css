@@ -619,15 +619,7 @@ h1, h2 {
 
 
       @media (max-width: 768px) {
-        .your-wrapper-class {
-          flex-direction: column;
-          gap: 30px;
-        }
       
-        .your-wrapper-class > div {
-          width: 100%;
-        }
-      }       
       /* Prevents horizontal scroll */
 body, html {
   overflow-x: hidden;
@@ -752,17 +744,21 @@ section {
       }
       
       .duo-right {
+        padding: 0 20px;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex: 1;
       }
       
       .duo-right img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
         display: block;
       }
+      
     
       .tag-label {
         display: inline-block;
