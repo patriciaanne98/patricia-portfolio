@@ -814,7 +814,7 @@ section {
         grid-template-columns: 1fr 1fr;
     gap: 40px;
         align-items: start;
-        max: width 1200px;
+        max-width: 1200px;
  margin:80px auto;
    padding:0 40px;
       }
@@ -975,5 +975,4 @@ section {
         background-color: #000;
       }
     }    
-  }
   
