@@ -844,9 +844,9 @@ section {
       }
       
       .project-showcase {
+        grid-template-columns: 1fr !important;
+        text-align: center;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
         gap: 60px;
         max-width: 1200px;
         margin: 80px auto;
@@ -854,6 +854,10 @@ section {
         opacity: 0;
         transform: translateY(40px);
         animation: fadeInUp 1.2s ease forwards;
+      }
+      
+      .project-text {
+        padding: 0 20px;
       }
       
       .project-text h2 {
@@ -873,13 +877,21 @@ section {
         font-size: 1.1rem;
         color: #333;
         line-height: 1.7;
+        padding-bottom: 20px;
       }
       
         .project-image img {
-          width: 100%;
+          max-width: 90%;
           height: auto;
-          max-width: 100%;
+          margin: 0 auto;
         }
+
+        .project-showcase {
+          grid-template-columns: 1fr !important;
+          text-align: center;
+        }
+        
+        
         
       
       @keyframes fadeInUp {
