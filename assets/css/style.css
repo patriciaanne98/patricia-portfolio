@@ -810,11 +810,13 @@ section {
         line-height: 1.7;
       }
       .about-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
-        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    gap: 40px;
+        align-items: start;
+        max: width 1200px;
+ margin:80px auto;
+   padding:0 40px;
       }
       
       .about-photo img {
