@@ -3,81 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Patricia Frogoso</title>
+  <title>Patricia Frogoso | Designer & Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="nav">
     <div class="nav-logo">
       <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
     </div>
+
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
     <nav class="nav-links" id="navLinks">
       <a href="index.html">HOME</a>
-      <a href="index.html">PORTFOLIO</a>
+      <a href="portfolio.html">PORTFOLIO</a>
       <a href="#">ABOUT</a>
       <a href="contact.html">CONTACT</a>
     </nav>
   </header>
 
-  <section class="about-hero">
-    <div class="about-text-left">
-      <h1>HERE TO MAKE<br>BIG IDEAS HAPPEN</h1>
-    </div>
-    <div class="about-text-right">
-      <p>I design with empathy, clarity, and purpose — translating real-life experience into digital impact.</p>
-    </div>
-  </section>
-  <section class="about-content">
+<section class="about-hero">
+  <div class="about-text-left">
+    <h1>HERE TO MAKE<br>BIG IDEAS HAPPEN</h1>
+  </div>
+  <div class="about-text-right">
+    <p>I design with empathy, clarity, and purpose — translating real-life experience into digital impact.</p>
+  </div>
+</section>
+
+<section class="about-content">
+  <div class="about-inner">
     <div class="about-photo">
       <img src="assets/img/pattycakes.jpeg" alt="Patricia Frogoso smiling at the camera">
     </div>
     <div class="about-text">
+      <h1 class="about-heading">Hi, I'm Patricia!</h1>
+
       <p class="about-bio">
         I grew up in a small town in Arkansas, surrounded by the warmth of my family’s Filipino restaurant. From a young age, I found myself designing menus, coordinating events, managing guests — and eventually, building the restaurant's website from scratch.
       </p>
+
       <p class="about-bio">
         My first steps into design weren’t in a studio — they were on the floor, serving customers, solving problems, and learning how experience shapes perception.
       </p>
+
       <p class="about-bio">
         At 14, I fell in love with digital spaces after customizing my Tumblr. I embedded music, played with code, and used visuals to tell stories — not knowing I was already thinking like a designer.
       </p>
+
       <p class="about-bio">
         In 2020, when the world slowed down, I found a new kind of movement. I became a certified Pilates instructor and started creating content to keep people grounded, connected, and well. It was during this time that I realized: design and wellness both require empathy, structure, and trust.
       </p>
+
       <p class="about-bio">
         I’m now a Junior at the University of Arkansas at Little Rock, pursuing a degree in Web Design & Development with a minor in Information Science. I’ve designed for small businesses, been featured on Hulu’s <em>Small Business Revolution</em>, led over 300 Pilates classes, and am building a portfolio that blends my entrepreneurial grit with thoughtful, human-first design.
       </p>
+
       <p class="about-bio">
         My dream is to work in product design or product management — to help build digital experiences that feel intentional, intuitive, and real.
       </p>
+
       <p class="about-bio">
         I believe that design is more than just how things look — it’s how they move, how they speak, and how they make people feel. My mission is to bring that clarity, calm, and creativity into every project I touch.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
-  </footer>
-  <script>
-    function scrollCarousel(direction) {
-      const track = document.getElementById('carouselTrack');
-      const scrollAmount = 340; // width of card + gap
-      track.scrollBy({
-        left: scrollAmount * direction,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-  
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById("navLinks");
-      navLinks.classList.toggle("active");
-    }
-  </script>
-</body>
-</html>
+<footer class="footer">
+  <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
+}
+</script>
