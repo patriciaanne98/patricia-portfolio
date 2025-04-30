@@ -103,7 +103,7 @@
 
   .case-hero {
     width: 100%;
-    height: 120vh; /* Adjust this height smaller or larger as needed */
+    height: 60vh; /* Adjust this height smaller or larger as needed */
     overflow: hidden;
   }
   
