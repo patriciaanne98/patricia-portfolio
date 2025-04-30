@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricia Frogoso | Designer & Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/munch.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-logo">
+      <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="case-hero">
+    <img src="assets/img/munchmate-carousel.png" alt="MunchMate Hero" class="hero-img">
+  </section>
+
+  <section class="case-title-section">
+  <div class="case-title-section">
+    <h1>MunchMate</h1>
+  </div>
+</section>
+  <!-- Project Details -->
+  <section class="case-details">
+    <div class="case-left">
+      <h3>Project</h3>
+      <p>MunchMate</p>
+      <h3>Deliverables</h3>
+      <p>UX Research, UX/UI Design, Mobile Design</p>
+    </div>
+    <div class="case-right">
+      <p>MunchMate is a mobile-first dating app designed for food lovers seeking romantic, friendly, or collaborative connections through shared cravings and culinary chemistry.
+        It blends personality, lifestyle, and foodie identity into a playful experience where finding a match is as fun as finding your next bite.</p>
+      <br>
+        <p>Create a friendly, inclusive platform that connects people based on food preferences, lifestyle, and vibe — whether for dating or friendship.</p>
+    </div>
+  </section>
+
+  <!-- Showcase Section -->
+  <section class="case-images">
+    <div class="image-wrapper">
+    <img src="assets/img/munchmate-carousel.png" alt="MunchMate Web Design" />
+    <img src="assets/img/munchmate-carousel2.png" alt="MunchMate UI Mobile" />
+    <img src="assets/img/munchmate-carousel3.png" alt="MunchMate App Mockup 5" />
+    <img src="assets/img/munchmate-carousel4.png" alt="MunchMate App Mockup 5" />
+    <img src="assets/img/munchmate-carousel5.png" alt="MunchMate App Mockup 3" />
+    <img src="assets/img/munchmate-carousel6.png" alt="MunchMate App Mockup 4" />
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Patricia Frogoso. All rights reserved.</p>
+  </footer>
+  <script>
+    function scrollCarousel(direction) {
+      const track = document.getElementById('carouselTrack');
+      const scrollAmount = 340; // width of card + gap
+      track.scrollBy({
+        left: scrollAmount * direction,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

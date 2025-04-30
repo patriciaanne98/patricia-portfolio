@@ -251,7 +251,7 @@ h1, h2 {
 .carousel-card {
   flex: 0 0 auto;
   width: 450px;
-  height: 470px;
+  height: 400px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05);
@@ -261,9 +261,10 @@ h1, h2 {
 
 .carousel-card img {
   width: 100%;
-  height: 80%;
+  height: 60%;
   border-radius: 8px;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
 .carousel-btn {
