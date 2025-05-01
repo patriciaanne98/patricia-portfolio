@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color:#fcfaf6;
-  color: #111;
+  background-color: #5C6740;
+  color: white;
   line-height: 1.6;
   font-size: 16px;
 }
@@ -93,7 +93,7 @@ h1, h2 {
   position: relative;
   padding: 4rem 2rem;
   height: auto; /* or try min-height: 70vh; */
-  background-image: url('https://images.pexels.com/photos/1878858/pexels-photo-1878858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-image: url('https://images.pexels.com/photos/8801154/pexels-photo-8801154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -224,7 +224,7 @@ height: auto;
 
 .services-left p {
   font-size: 1.1rem;
-  color: #333;
+  color: white
 }
 
 .services-right {
@@ -279,7 +279,7 @@ height: auto;
   flex: 0 0 auto;
   width: 450px;
   height: 400px;
-  background-color: #fff;
+  background-color: #1a1d1be5;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05);
   padding: 20px;
@@ -298,10 +298,10 @@ height: auto;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
+  font-size: 1.2rem;
   background: #fff;
   border: none;
-  border-radius: 50%;
+  border-radius: 45%;
   padding: 10px 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   cursor: pointer;
@@ -333,7 +333,7 @@ height: auto;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #111;
+  color: white;
   letter-spacing: -1px;
   text-transform: uppercase;
   animation: slideInLeft 1s ease-in-out;
@@ -379,14 +379,14 @@ height: auto;
   font-size: 2.5rem;
   margin-bottom: 30px;
   text-align: left;
-  color: #111;
+  color: white;
 }
 
 .about-bio {
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #333;
+  color: white;
   margin-bottom: 24px;
   animation: fadeInUp 1.2s ease-in-out;
 }
@@ -396,7 +396,7 @@ height: auto;
   text-align: center;
   padding: 40px;
   font-size: 0.9rem;
-  color: #aaa;
+  color: white;
 }
 
 /* Animations */
@@ -431,7 +431,7 @@ height: auto;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 500;
-    color: #555;
+    color: white;
   }
   
   
@@ -448,7 +448,7 @@ height: auto;
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    color: #111;
+    color: white;
     letter-spacing: -1px;
     text-transform: none;
     margin-bottom: 10px;
@@ -457,7 +457,7 @@ height: auto;
   .portfolio-tags {
     font-size: 1rem;
     font-weight: 500;
-    color: #666;
+    color: rgb(241, 239, 239);
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -479,18 +479,18 @@ height: auto;
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #111;
+    color: white;
   }
   
   .project-tags {
     font-size: 0.9rem;
-    color: #999;
+    color: #e2dede;
     margin-bottom: 10px;
   }
   
   .project-desc {
     font-size: 1.1rem;
-    color: #333;
+    color: white;
     line-height: 1.7;
   }
   
@@ -544,20 +544,20 @@ height: auto;
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #111;
+    color: white;
     animation: fadeIn 1s ease-in-out;
   }
   
   .contact-left p {
     font-size: 1.1rem;
-    color: #444;
+    color: white;
     margin-bottom: 30px;
   }
   
   .cta-button {
     display: inline-block;
     background-color: #d5f35d;
-    color: #111;
+    color: white;
     padding: 12px 28px;
     font-size: 1rem;
     border-radius: 30px;
@@ -569,7 +569,7 @@ height: auto;
   
   .cta-button:hover {
     background-color: #c4e84b;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 20px rgba(248, 248, 248, 0.08);
   }
   
   .contact-form {
@@ -589,7 +589,7 @@ height: auto;
     padding: 12px;
     font-size: 1rem;
     border: none;
-    border-bottom: 2px solid #111;
+    border-bottom: 2px solid white;
     background: none;
     outline: none;
   }
@@ -600,7 +600,7 @@ height: auto;
     padding: 12px;
     font-size: 1rem;
     border: none;
-    border-bottom: 2px solid #111;
+    border-bottom: 2px solid white;
     background: none;
     resize: vertical;
     outline: none;
@@ -609,8 +609,9 @@ height: auto;
   button[type="submit"] {
     padding: 12px 28px;
     font-size: 1rem;
-    border: 2px solid #111;
-    background: none;
+    border: 0;
+    background: white;
+    color: black;
     border-radius: 30px;
     cursor: pointer;
     font-weight: 600;
@@ -618,8 +619,8 @@ height: auto;
   }
   
   button[type="submit"]:hover {
-    background: #111;
-    color: #fff;
+    background: black;
+    color: white;
   }
 
 /* Hide hamburger by default on desktop */
@@ -1009,7 +1010,7 @@ section {
     
       .contact-form button {
         align-self: center;
-        color:#000;
+        color:white;
         background-color: whitesmoke;
       } 
     }
