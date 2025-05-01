@@ -307,4 +307,41 @@ align-items: center;
     object-fit: cover; /* Keeps the image proportionally scaled and covers entire area */
     display: block;
   }
+  /* Case Title Section */
+.case-title-section {
+  padding: 60px 40px 20px;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.case-title-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Case Details Layout */
+.case-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.case-left h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.case-left p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
 }
