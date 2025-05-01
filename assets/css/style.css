@@ -97,8 +97,13 @@ h1, h2 {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
 }
 
 .hero p {
