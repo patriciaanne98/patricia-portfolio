@@ -704,6 +704,7 @@ section {
       }
     
       .hamburger {
+        color: #000;
         display: block;
         font-size: 1.8rem;
         position: absolute;
