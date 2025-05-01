@@ -269,11 +269,6 @@ align-items: center;
     border-bottom: 1px solid #eee;
   }
 
-.case-intro {
-  grid-template-columns: 1fr;
-  text-align: center;
-}
-
 .image-row img {
   width: 100%;
 }
