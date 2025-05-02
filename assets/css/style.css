@@ -752,7 +752,11 @@ section {
       }
     
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
+      }
+
+      .hero h2 {
+        font-size: 1.4rem;
       }
     
       .hero p {
