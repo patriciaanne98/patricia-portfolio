@@ -842,22 +842,91 @@ section {
         text-align: center;
         overflow-wrap: break-word;
       }
-    
-  /* Carousel Section */
-  .carousel-track {
-    scroll-snap-type: x mandatory;
-  }
   
-  .carousel-card {
-    scroll-snap-align: start;
-  }  
+  
+  /* Carousel */
+.carousel-section {
+  padding: 10px 40px;
+}
 
-  .carousel-card {
-    max-width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-  
+.carousel-item-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.carousel-item-link:hover {
+  cursor: pointer;
+}
+
+.carousel-title {
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  padding-left: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: visible; /* Shows the entire button */
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 40px;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome & Safari */
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: #1a1d1be5;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 70%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  background: #fff;
+  border: none;
+  border-radius: 55%;
+  padding: 10px 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn.left {
+  left: -10px;
+}
+
+.carousel-btn.right {
+  right: -10px;
+}
+
   .about-inner {
     flex-direction: column;
     align-items: center;
