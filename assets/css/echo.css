@@ -276,7 +276,7 @@ align-items: center;
 
   .case-hero {
     max-width: 100%;
-    height: 40vh; /* Adjust this height smaller or larger as needed */
+    height: 30vh; /* Adjust this height smaller or larger as needed */
     overflow: hidden;
   }
   
@@ -289,7 +289,7 @@ align-items: center;
 
     /* Case Title Section */
 .case-title-section {
-  padding: 60px 40px 20px;
+  padding: 20px 40px 20px;
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
