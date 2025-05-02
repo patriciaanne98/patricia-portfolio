@@ -247,6 +247,15 @@ height: auto;
   padding: 10px 40px;
 }
 
+.carousel-item-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.carousel-item-link:hover {
+  cursor: pointer;
+}
+
 .carousel-title {
   text-align: left;
   font-family: 'Playfair Display', serif;
