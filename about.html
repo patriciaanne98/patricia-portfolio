@@ -96,7 +96,8 @@
 
 <!-- === CERTIFICATION CAROUSEL SECTION === -->
 <section class="cert-slideshow-section">
-  <h2 class="section-heading">Certifications</h2>
+  <h2 class="section-heading reveal">Certifications</h2>
+  <div class="cert-grid reveal"> 
   <div class="slideshow-container">
     <button class="slide-btn left" onclick="changeCertSlide(-1)">❮</button>
 
@@ -180,5 +181,21 @@ function toggleMenu() {
   navLinks.classList.toggle("active");
 }
 </script>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  window.addEventListener('scroll', () => {
+    reveals.forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+      const triggerPoint = window.innerHeight * 0.9;
+
+      if (top < triggerPoint) {
+        el.classList.add('active');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

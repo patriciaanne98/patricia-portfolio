@@ -112,10 +112,10 @@
         <section class="case-images">
           <div class="split-showcase-user">
             <div class="left-panel-user">
-              <img src="assets/img/tange-user-persona.png" alt="EchoSync Web Design">
+              <img src="assets/img/tange-user-persona.png" alt="EchoSync Web Design" class="responsive-img zoomable">
             </div>
             <div class="right-panel-user">
-              <img src="assets/img/tange-user-persona2.png" alt="EchoSync UI Mobile">
+              <img src="assets/img/tange-user-persona2.png" alt="EchoSync UI Mobile" class="responsive-img zoomable">
             </div>
           </div>
         </section>
@@ -123,20 +123,20 @@
 
 <!-- Design Process Section -->
 <section class="process-section">
-  <img src="assets/img/Design Process.png" alt=" TANGE Design Process" class="responsive-img">
-  <img src="assets/img/User Research.png" alt="User Research for TANGE" class="responsive-img">
-  <img src="assets/img/Pain Points.png" alt="Pain Points for TANGE" class="responsive-img">
-  <img src="assets/img/Competitve Audit.png" alt="Competitive Audit for TANGE" class="responsive-img">
-  <img src="assets/img/User Journey.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/User flow.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/Lofi Wireframes.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/tange-mid-fi-ui.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/tange-mid-fi-ui2.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/tange-mid-fi-ui3.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/Usability Testing_ TANGÉ Vitamin C Gummies-2.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/tange-usability.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/Impacts.png" alt="User Journey for TANGE" class="responsive-img">
-  <img src="assets/img/Lessons and Progress for Success.png" alt="User Journey for TANGE" class="responsive-img">
+  <img src="assets/img/Design Process.png" alt=" TANGE Design Process" class="responsive-img zoomable">
+  <img src="assets/img/User Research.png" alt="User Research for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/Pain Points.png" alt="Pain Points for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/Competitve Audit.png" alt="Competitive Audit for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/User Journey.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/User flow.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/Lofi Wireframes.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/tange-mid-fi-ui.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/tange-mid-fi-ui2.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/tange-mid-fi-ui3.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/Usability Testing_ TANGÉ Vitamin C Gummies-2.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/tange-usability.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/Impacts.png" alt="User Journey for TANGE" class="responsive-img zoomable">
+  <img src="assets/img/Lessons and Progress for Success.png" alt="User Journey for TANGE" class="responsive-img zoomable">
   
 </section>
 
@@ -161,5 +161,28 @@
       navLinks.classList.toggle("active");
     }
   </script>
+
+  <!-- Modal Lightbox -->
+<div id="zoomModal" class="zoom-modal" onclick="closeZoom()">
+  <img id="zoomedImg" src="" alt="Zoomed Image">
+</div>
+
+<script>
+  const zoomables = document.querySelectorAll('.zoomable');
+  const zoomModal = document.getElementById('zoomModal');
+  const zoomedImg = document.getElementById('zoomedImg');
+
+  zoomables.forEach(img => {
+    img.addEventListener('click', () => {
+      zoomedImg.src = img.src;
+      zoomModal.classList.add('show');
+    });
+  });
+
+  function closeZoom() {
+    zoomModal.classList.remove('show');
+    zoomedImg.src = '';
+  }
+</script>
 </body>
 </html>

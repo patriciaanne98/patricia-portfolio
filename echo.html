@@ -95,8 +95,8 @@
 </section>
 <!-- Design Process Section -->
 <section class="process-section">
-  <img src="assets/img/Echoes-Design Process.png" alt="Echc Web Design" class="responsive-img"/>
-  <img src="assets/img/Echoes-Pain Points.png" alt="Echc Web Design" class="responsive-img"/>
+  <img src="assets/img/Echoes-Design Process.png" alt="Echc Web Design" class="responsive-img zoomable"/>
+  <img src="assets/img/Echoes-Pain Points.png" alt="Echc Web Design" class="responsive-img zoomable"/>
   </section>
 
 <!--User Personas-->
@@ -110,25 +110,25 @@
        <section class="case-images">
         <div class="split-showcase-user">
           <div class="left-panel-user">
-            <img src="assets/img/echoes-user-persona.png" alt="Echoes Web Design">
+            <img src="assets/img/echoes-user-persona.png" alt="Echoes Web Design" class="responsive-img zoomable">
           </div>
           <div class="right-panel-user">
-            <img src="assets/img/echoes-user-persona2.png" alt="Echoesc UI Mobile">
+            <img src="assets/img/echoes-user-persona2.png" alt="Echoesc UI Mobile" class="responsive-img zoomable">
           </div>
         </div>
       </section>
 <!-- Design Process Section -->
 <section class="process-section">
-  <img src="assets/img/Echoes-User Research.png" alt="Echoes User Research" class="responsive-img"/>
-  <img src="assets/img/Echoes-Progressive Audit.png" alt="Echoes Progressive Audit" class="responsive-img"/>
-  <img src="assets/img/Echoes-User Journey.png" alt="Echoes User Journey" class="responsive-img"/>
-  <img src="assets/img/User flow.jpg" alt="Echoes User Journey" class="responsive-img"/>
-  <img src="assets/img/Echoes-Wireframe.png" alt="Echo App Mockup 4" class="responsive-img"/>
-  <img src="assets/img/echoes-impact.png" alt="Echoes Impact" class="responsive-img"/>
-  <img src="assets/img/echoes-of-silence-hi-frame.png" alt="Echoes Impact" class="responsive-img"/>
-  <img src="assets/img/echoes-of-silence-hi-frame-2.png" alt="Echoes Impact" class="responsive-img"/>
-  <img src="assets/img/echoes-usability-testing.png" alt="Echoes Impact" class="responsive-img"/>
-  <img src="assets/img/echoes-lesson--learned.png" alt="Echoes Impact" class="responsive-img"/>
+  <img src="assets/img/Echoes-User Research.png" alt="Echoes User Research" class="responsive-img zoomable"/>
+  <img src="assets/img/Echoes-Progressive Audit.png" alt="Echoes Progressive Audit" class="responsive-img zoomable"/>
+  <img src="assets/img/Echoes-User Journey.png" alt="Echoes User Journey" class="responsive-img zoomable"/>
+  <img src="assets/img/User flow.jpg" alt="Echoes User Journey" class="responsive-img zoomable"/>
+  <img src="assets/img/Echoes-Wireframe.png" alt="Echo App Mockup 4" class="responsive-img zoomable"/>
+  <img src="assets/img/echoes-impact.png" alt="Echoes Impact" class="responsive-img zoomable"/>
+  <img src="assets/img/echoes-of-silence-hi-frame.png" alt="Echoes Impact" class="responsive-img zoomable"/>
+  <img src="assets/img/echoes-of-silence-hi-frame-2.png" alt="Echoes Impact" class="responsive-img zoomable"/>
+  <img src="assets/img/echoes-usability-testing.png" alt="Echoes Impact" class="responsive-img zoomable"/>
+  <img src="assets/img/echoes-lesson--learned.png" alt="Echoes Impact" class="responsive-img zoomable"/>
   </section>
 
   <!-- Footer -->
@@ -152,5 +152,28 @@
       navLinks.classList.toggle("active");
     }
   </script>
+
+  <!-- Modal Lightbox -->
+<div id="zoomModal" class="zoom-modal" onclick="closeZoom()">
+  <img id="zoomedImg" src="" alt="Zoomed Image">
+</div>
+
+<script>
+  const zoomables = document.querySelectorAll('.zoomable');
+  const zoomModal = document.getElementById('zoomModal');
+  const zoomedImg = document.getElementById('zoomedImg');
+
+  zoomables.forEach(img => {
+    img.addEventListener('click', () => {
+      zoomedImg.src = img.src;
+      zoomModal.classList.add('show');
+    });
+  });
+
+  function closeZoom() {
+    zoomModal.classList.remove('show');
+    zoomedImg.src = '';
+  }
+</script>
 </body>
 </html>
