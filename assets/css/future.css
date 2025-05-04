@@ -31,35 +31,18 @@ h1, h2 {
   border-bottom: 1px solid #eee;
 }
 
-.nav-logo a {
-  text-decoration: none;
-  color: #111;
+.nav-logo {
   font-weight: 600;
   font-size: 1.2rem;
-}
-
-.logo-sub {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 0.65rem;
-  color: #888;
-  margin-left: 6px;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  vertical-align: super;
-  opacity: 0.7;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
+  text-decoration: none;
 }
 
 .nav-links a {
+  margin-left: 80px;
   text-decoration: none;
   color: #111;
-  font-weight: 500;
   position: relative;
+  font-weight: 500;
 }
 
 .nav-links a::after {
@@ -80,6 +63,29 @@ h1, h2 {
   transform-origin: left;
 }
 
+.nav-logo a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-logo a:hover {
+  color: #555;
+}
+
+.logo-sub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.65rem;
+  color: #888;
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  vertical-align: super;
+  opacity: 0.7;
+}
+
 /* Hide hamburger by default on desktop */
 .hamburger {
   display: none;
@@ -87,37 +93,30 @@ h1, h2 {
   cursor: pointer;
   user-select: none;
 }
+/* Default desktop nav-links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
 
 /* Hero Section */
+
 .case-hero {
-  position: relative;
   width: 100%;
-  height: 500px; /* control the hero height */
+  height: 60vh; /* Adjust this height smaller or larger as needed */
   overflow: hidden;
 }
 
-.case-hero img {
+.hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Keeps the image proportionally scaled and covers entire area */
+  display: block;
 }
 
-/* Hero Text over Image */
-.hero-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;
-  color: white;
-  letter-spacing: -2px;
-  text-align: center;
-}
-
-/* Case Title Section */
+/* Case title below the image, aligned to the left */
 .case-title-section {
-  padding: 60px 40px 20px;
+  padding: 20px 40px 20px;
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
@@ -127,10 +126,9 @@ h1, h2 {
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
   font-weight: 600;
-  color: #111;
+  color: #111111;
 }
-
-/* Case Details Layout */
+/* Case details layout */
 .case-details {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -138,22 +136,52 @@ h1, h2 {
   padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+.case-details-right {
+  grid-template-columns: 1fr; /* Stack columns */
+  gap: 30px;
+  padding: 40px;
+  margin-bottom: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.4rem;
 }
 
 .case-left h3 {
-  font-size: 1rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 5px;
+  color: blueviolet;
 }
 
 .case-left p {
-  margin-bottom: 20px;
-  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
   color: #333;
 }
 
-/* Split Showcase */
+.case-right ul li {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  color: #333;
+}
+.process-section {
+  padding: 20px;
+margin: auto;
+}
+
+.responsive-img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
 .split-showcase {
   display: flex;
   flex-wrap: wrap;
@@ -161,36 +189,100 @@ h1, h2 {
   min-height: 80vh;
 }
 
-.left-panel, .right-panel {
+.split-showcase-user {
+  display: flex;
+  justify-content: center;  /* centers the image group */
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.left-panel-user,
+.right-panel-user {
+  flex: 0 1 600px; /* adjust width as needed */
+  display: flex;
+  justify-content: center;
+}
+
+.left-panel-user img,
+.right-panel-user img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.left-panel,
+.right-panel {
   flex: 1;
-  padding: 0;
+  padding: 0 -50px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-.left-panel img, .right-panel img {
+.left-panel img,
+.right-panel img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
  /* Hide hamburger by default on desktop */
- .hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  user-select: none;
+.hamburger {
+display: none;
+font-size: 1.8rem;
+cursor: pointer;
+user-select: none;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 40px;
   font-size: 0.9rem;
   color: #aaa;
 }
+
+/* Lightbox Zoom Modal */
+.zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.zoom-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.zoom-modal.show {
+  display: flex;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+
+
+
+
 
 
 
@@ -212,6 +304,7 @@ overflow-x: hidden;
 img {
 max-width: 100%;
 height: auto;
+object-fit: cover;
 display: block;
 }
 
@@ -269,72 +362,136 @@ align-items: center;
     border-bottom: 1px solid #eee;
   }
 
-.image-row img {
-  width: 100%;
-}
   .split-showcase {
     flex-direction: column;
   }
 
-  .left-panel, .right-panel {
+  .left-panel,
+  .right-panel {
     width: 100%;
   }
 
-  .left-panel img, .right-panel img {
+  .left-panel img,
+  .right-panel img {
     width: 100%;
     height: auto;
   }
 
-  .hero-title {
-    font-size: 3rem;
-  }
   /* Hero Section */
 
-  .case-hero {
-    width: 100%;
-    height: 40%; /* Adjust this height smaller or larger as needed */
-    overflow: hidden;
-  }
-  
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps the image proportionally scaled and covers entire area */
-    display: block;
-  }
+.case-hero {
+  width: 100%;
+  height: 30%; /* Adjust this height smaller or larger as needed */
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the image proportionally scaled and covers entire area */
+  display: block;
+}
+
   /* Case Title Section */
 .case-title-section {
-  padding: 60px 40px 20px;
-  text-align: left;
-  max-width: 1200px;
-  margin: 0 auto;
+padding: 20px 40px 20px;
+text-align: left;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .case-title-section h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  font-weight: 600;
-  text-align: center;
-  color: #111;
+font-family: 'Playfair Display', serif;
+font-size: 2.8rem;
+font-weight: 600;
+text-align: center;
+color: #111;
 }
 
 /* Case Details Layout */
 .case-details {
-  grid-template-columns: 1fr; /* Stack columns */
-  gap: 30px;
-  padding: 20px;
+grid-template-columns: 1fr; /* Stack columns */
+gap: 30px;
+padding: 20px;
+font-size: 1rem;
 }
 
 .case-left h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
+font-size: 1.3rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 5px;
 }
 
 .case-left p {
-  margin-bottom: 20px;
-  font-size: 0.95rem;
+margin-bottom: 20px;
+font-size: .95rem;
+color: #333;
+}
+
+.split-showcase-user {
+flex-direction: column;
+object-fit: cover;
+}
+.process-section {
+padding: 10px 20px;
+}
+
+.responsive-img {
+max-width: 100%;
+height: auto;
+}
+
+.case-details-right {
+  grid-template-columns: 1fr; /* Stack columns */
+  gap: 30px;
+  padding: 40px;
+  margin-bottom: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 30px;
+}
+
+.case-right ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
   color: #333;
+}
+.process-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.split-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.split-showcase-user {
+  display: flex;
+  justify-content: center;  /* centers the image group */
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.left-panel-user,
+.right-panel-user {
+  flex: 0 1 300px; /* adjust width as needed */
+  display: flex;
+  justify-content: center;
+}
+
+.left-panel-user img,
+.right-panel-user img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 }
