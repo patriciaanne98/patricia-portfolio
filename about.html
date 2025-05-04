@@ -71,9 +71,108 @@
   </div>
 </section>
 
+<!-- === ARTWORK SLIDESHOW SECTION === -->
+<section class="art-slideshow-section">
+  <h2 class="section-heading">My Art & Sketches</h2>
+  <div class="slideshow-container">
+    <button class="slide-btn left" onclick="changeSlide(-1)">❮</button>
+
+    <div class="slide fade">
+      <img src="assets/img/hand-drawing.jpg" alt="Sketchbook Page">
+    </div>
+    <div class="slide fade">
+      <img src="assets/img/leg-drawing.JPG" alt="Digital Illustration">
+    </div>
+    <div class="slide fade">
+      <img src="assets/img/drapery-drawing.JPG" alt="Mixed Media Piece">
+    </div>
+    <div class="slide fade">
+      <img src="assets/img/perspective-drawing.jpg" alt="Pencil Portrait">
+    </div>
+
+    <button class="slide-btn right" onclick="changeSlide(1)">❯</button>
+  </div>
+</section>
+
+<!-- === CERTIFICATION CAROUSEL SECTION === -->
+<section class="cert-slideshow-section">
+  <h2 class="section-heading">Certifications</h2>
+  <div class="slideshow-container">
+    <button class="slide-btn left" onclick="changeCertSlide(-1)">❮</button>
+
+    <div class="slide-cert fade">
+      <img src="assets/img/product-analytics.png" alt="Product Analytics Certificate" />
+    </div>
+    <div class="slide-cert fade">
+      <img src="assets/img/SEO-cert.png" alt="SEO Certificate" />
+    </div>
+    <div class="slide-cert fade">
+      <img src="assets/img/product-strategy.png" alt="Product Strategy Certificate" />
+    </div>
+
+    <div class="slide-cert fade">
+      <img src="assets/img/Learn UI Design Cert.png" alt="Learn UI Certificate" />
+    </div>
+
+    <div class="slide-cert fade">
+      <img src="assets/img/digital-marketing-cert.png" alt="Digital Marketing Certificate" />
+    </div>
+
+    <div class="slide-cert fade">
+      <img src="assets/img/product-discovery.png" alt="Product Discovery Certificate" />
+    </div>
+    <button class="slide-btn right" onclick="changeCertSlide(1)">❯</button>
+  </div>
+</section>
+
 <footer class="footer">
   <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
 </footer>
+<script>
+  let certIndex = 0;
+  const certSlides = document.querySelectorAll('.slide-cert');
+
+  function showCertSlide(index) {
+    certSlides.forEach(slide => slide.style.display = 'none');
+    if (index >= certSlides.length) certIndex = 0;
+    if (index < 0) certIndex = certSlides.length - 1;
+    certSlides[certIndex].style.display = 'block';
+  }
+
+  function changeCertSlide(n) {
+    certIndex += n;
+    showCertSlide(certIndex);
+  }
+
+  // Initialize
+  showCertSlide(certIndex);
+</script>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.style.display = 'none');
+    slideIndex = (index + slides.length) % slides.length;
+    slides[slideIndex].style.display = 'block';
+  }
+
+  function changeSlide(n) {
+    showSlide(slideIndex + n);
+  }
+
+  function autoSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+  }
+
+  // Initialize the first slide
+  showSlide(slideIndex);
+
+  // Set autoplay to switch slides every 5 seconds
+  setInterval(autoSlide, 3000); // 5000 = 5 seconds
+</script>
 
 <script>
 function toggleMenu() {
@@ -81,3 +180,5 @@ function toggleMenu() {
   navLinks.classList.toggle("active");
 }
 </script>
+</body>
+</html>

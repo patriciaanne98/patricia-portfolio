@@ -397,15 +397,18 @@ height: auto;
 }
 
 .about-inner {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
 }
 
 .about-photo img {
-  width: 80%;
-  height: 60%;
+  width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+  align-items: center;
+  border-radius: 10px; /* optional: soften for mobile */
   object-fit: cover;
   border-radius:0%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -432,6 +435,101 @@ height: auto;
   color: white;
   margin-bottom: 24px;
   animation: fadeInUp 1.2s ease-in-out;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin: 60px 40px 20px;
+  color: #fffafa;
+  text-align: left;
+}
+
+.about-artwork {
+  padding: 0 40px 80px;
+}
+
+
+.about-certifications {
+  padding: 0 40px 80px;
+}
+
+.slide-cert {
+  display: none;
+}
+
+.slide-cert img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  padding: 10px;
+}
+
+.art-slideshow-section {
+  padding: 10px 40px;
+  background-color: #57863010;
+  text-align: center;
+}
+
+  .slideshow-container {
+    position: relative;
+    max-width: 700px; /* 👈 smaller size */
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+.slide {
+  display: none;
+}
+
+  .slide img {
+    width: 100%;
+    max-height: 800px; /* 👈 adjust to control how tall it gets */
+    object-fit: contain;  /* or use 'contain' for full image without cropping */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }  
+
+  .slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #ffffffe3;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease;
+    padding: 10px;
+  }
+  
+
+.slide-btn:hover {
+  color: #b4b1b1;
+}
+
+.slide-btn.left {
+  left: -40px; /* 👈 push it outside the left edge */
+}
+
+.slide-btn.right {
+  right: -40px; /* 👈 push it outside the right edge */
+}
+
+
+.fade {
+  animation: fadeInSlide 0.8s ease-in-out;
+}
+
+@keyframes fadeInSlide {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
 }
 
 /* Footer */
@@ -1028,7 +1126,13 @@ section {
     padding: 0 10px;
   }
   
-      
+  .slide-btn.left {
+    left: 10px;
+  }
+
+  .slide-btn.right {
+    right: 10px;
+  }
       /* Portfolio Page */
       portfolio-hero {
         text-align: left;
