@@ -97,6 +97,18 @@ function changeDirection(dir) {
   }
 }
 
-window.onload = () => {
-  startGame();
-};
+// window.onload = () => {
+  // startGame();
+// };
+
+document.addEventListener("keydown", function (e) {
+  const keys = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+  if (keys.includes(e.key)) {
+    e.preventDefault(); // ⛔ stop scrolling
+  }
+
+  if (e.key === "ArrowLeft" && direction !== "RIGHT") direction = "LEFT";
+  else if (e.key === "ArrowUp" && direction !== "DOWN") direction = "UP";
+  else if (e.key === "ArrowRight" && direction !== "LEFT") direction = "RIGHT";
+  else if (e.key === "ArrowDown" && direction !== "UP") direction = "DOWN";
+});
