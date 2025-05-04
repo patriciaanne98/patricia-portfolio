@@ -477,6 +477,7 @@ height: auto;
     align-items: start;
     gap: 60px;
     max-width: 1200px;
+    min-height: 400px; /* or higher like 500px if needed */
     margin: 80px auto;
     padding: 0 40px;
     opacity: 0;
@@ -502,14 +503,62 @@ height: auto;
     color: white;
     line-height: 1.7;
   }
+
+  .project-card {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  
+  .project-card img {
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(99, 95, 95, 0.884);
+    transition: 0.3s ease;
+  }
+  
+  
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(70, 68, 68, 0.65);
+    color: rgb(255, 255, 255);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px;
+  }
+  
+  .project-image:hover .hover-overlay {
+    opacity: 1;
+  }
+  
+  .project-image:hover img {
+    filter: brightness(80%);
+    transform: scale(1.02);
+  }
+  
   
   .project-image img {
     max-width: 800px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 12px 32px rgb(231, 230, 230);
     object-fit: cover;
   }
+
   
   @keyframes fadeInUp {
     from {
@@ -1087,4 +1136,28 @@ section {
         color:black;
         background-color: white;
       } 
+
+      .project-showcase {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    
+      .project-image {
+        height: auto;
+      }
+    
+      .project-card {
+        height: auto;
+      }
+    
+      .project-card img {
+        height: auto;
+        object-fit: contain;
+      }
+    
+      .hover-overlay {
+        font-size: 0.95rem;
+        padding: 12px;
+      }
+    }
     }
