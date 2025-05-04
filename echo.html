@@ -133,10 +133,18 @@
   <img src="assets/img/echoes-lesson--learned.png" alt="Echoes Impact" class="responsive-img zoomable"/>
   </section>
 
-  <section class="prompt-tool">
-    <h2>✨ Need a prompt from Echo?</h2>
-    <p id="promptDisplay">Click the button to get a prompt.</p>
-    <button onclick="getPrompt()">Generate Prompt</button>
+  <section class="mood-check">
+    <h2>🌤️ How are you feeling today?</h2>
+    <div class="mood-buttons">
+      <button onclick="showAdvice('happy')">😊 Happy</button>
+      <button onclick="showAdvice('sad')">😔 Sad</button>
+      <button onclick="showAdvice('frustrated')">😤 Frustrated</button>
+      <button onclick="showAdvice('tired')">😴 Tired</button>
+      <button onclick="showAdvice('anxious')">😰 Anxious</button>
+    </div>
+    <div id="adviceDisplay" class="advice-box">
+      <!-- Advice will appear here -->
+    </div>
   </section>
   
   <!-- Footer -->
