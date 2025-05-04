@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fun JavaScript Projects | Patricia Frogoso</title>
+  <link rel="stylesheet" href="assets/css/projects.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-logo">
+      <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="#">JS LAB</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="js-lab">
+    <h1>🧪 JS Lab</h1>
+    <p>Small tools. Big impact. Built for creativity, calm, and clarity.</p>
+  
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>🎧 NeuroFocus Mode</h3>
+        <p>A calming productivity app with timer + immersive soundscape.</p>
+        <a href="focus.html" class="view-button">Launch</a>
+      </div>
+  
+      <div class="project-card">
+        <h3>🌤️ MoodCheck</h3>
+        <p>A self-reflection tool to give advice based on your current emotion.</p>
+        <a href="echo.html" class="view-button">Try It</a>
+      </div>
+  
+      <!-- Add more projects here in the future -->
+    </div>
+  </section>
+  
+  <script src="assets/js/script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

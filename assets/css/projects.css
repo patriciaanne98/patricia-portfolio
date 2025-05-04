@@ -1,0 +1,251 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+        font-family: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+        background-color: #355f2ae1;
+        color: #1f2937; /* neutral-800 */
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  
+  /* Navigation */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background-color: #fdfdfd;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .nav-links a {
+    margin-left: 80px;
+    text-decoration: none;
+    color: #111;
+    position: relative;
+    font-weight: 500;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #111;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .nav-logo a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .nav-logo a:hover {
+    color: #555;
+  }
+  
+  .logo-sub {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.65rem;
+    color: #888;
+    margin-left: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    vertical-align: super;
+    opacity: 0.7;
+  }
+  
+  /* Hide hamburger by default on desktop */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  /* Default desktop nav-links */
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+
+    .js-lab {
+        max-width: 1100px;
+        margin: 80px auto;
+        padding: 80px 60px;
+        text-align: center;
+        background: linear-gradient(180deg, #063616 0%, #e5e7eb 100%);
+        border-radius: 24px;
+        box-shadow: 0 10px 32px rgba(2, 97, 18, 0.05);
+      }
+      
+      .js-lab h1 {
+         color:white;
+        font-size: 3rem;
+        padding-bottom: 20px;
+      }
+
+      .js-lab p {
+        color: white;
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+      }
+  .project-card {
+    background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.836);
+  text-align: center;
+  transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+  
+  .project-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    color: #111;
+  }
+  
+  .project-card p {
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .view-button {
+    background-color: #111827; /* deep slate gray */
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-button:hover {
+    background-color: #374151; /* slightly lighter on hover */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+      
+    /* Prevents horizontal scroll */
+  body, html {
+  overflow-x: hidden;
+  }
+  
+  /* Make sure images scale properly */
+  img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  }
+  
+    /* Navbar */
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      position: relative;
+    }
+  
+    .hamburger {
+      color: #111;
+      display: block;
+      font-size: 1.8rem;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    
+  
+    .nav-links {
+      max-height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      width: 100%;
+      background: #fdfdfd;
+      padding: 0 40px;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+  
+    .nav-links.active {
+      max-height: 300px;
+      padding: 20px 40px;
+    }
+  
+    .nav-links a {
+      padding: 10px 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .js-lab {
+        padding: 40px 20px;
+      }
+    
+      .project-card {
+        padding: 30px 20px;
+      }
+}
