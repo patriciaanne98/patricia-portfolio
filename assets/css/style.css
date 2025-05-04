@@ -129,6 +129,40 @@ h1, h2 {
   margin: 0 auto;
 }
 
+.tools-carousel {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 30px 0;
+}
+
+.tools-track {
+  display: flex;
+  gap: 60px;
+  animation: scrollTools 20s linear infinite;
+}
+
+.tools-track img {
+  height: 40px;
+  width: auto;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.tools-track img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scrollTools {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Designer Showcase Split Section */
 
 .hero-duo {
