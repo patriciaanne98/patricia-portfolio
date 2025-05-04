@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>🐍 Snake Game | JS Lab</title>
+    <link rel="stylesheet" href="assets/css/snake.css" />
+  </head>
+<body>
+  <header class="nav">
+    <div class="nav-logo">
+      <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="projects.html">JS LAB</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+  </header>
+
+  <div class="snake-container">
+    <!-- How to Play Button -->
+<button class="howto-btn" onclick="toggleInstructions()">📖 How to Play</button>
+
+<!-- Instructions Box -->
+<div id="instructions" class="instructions-box" style="display: none;">
+  <p><strong>How to Play:</strong></p>
+  <ul>
+    <li>Use ⬆️ ⬇️ ⬅️ ➡️ buttons to move the snake</li>
+    <li>Collect 🍓 strawberries to gain points</li>
+    <li>Don't hit the walls or your own tail!</li>
+  </ul>
+</div>
+
+    <h1>🐍 Snake Game</h1>
+    <canvas id="snakeCanvas" width="400" height="400"></canvas>
+  
+    <div class="score">Score: <span id="score">0</span></div>
+  
+    <!-- START BUTTON -->
+    <button onclick="startGame()" class="start-btn">▶️ Start Game</button>
+  
+    <!-- Gameboy controller buttons -->
+    <div class="controller">
+      <button class="btn up" onclick="changeDirection('up')">⬆️</button>
+      <div class="middle-row">
+        <button class="btn left" onclick="changeDirection('left')">⬅️</button>
+        <button class="btn down" onclick="changeDirection('down')">⬇️</button>
+        <button class="btn right" onclick="changeDirection('right')">➡️</button>
+      </div>
+    </div>
+  </div>
+  
+    
+  <script src="assets/js/snake.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+    </script>
+    <script>
+      function toggleInstructions() {
+        const box = document.getElementById("instructions");
+        box.style.display = box.style.display === "none" ? "block" : "none";
+      }
+    </script>    
+</body>
+</html>

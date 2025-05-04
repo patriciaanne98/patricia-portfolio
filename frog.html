@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐸 Feed the Frog</title>
+  <link rel="stylesheet" href="assets/css/frog.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-logo">
+      <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="projects.html">JS LAB</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Game Area -->
+  <div class="game-area" id="gameArea">
+    <div class="frog">🐸</div>
+
+    <!-- UI Panel -->
+    <div class="ui">
+      <div class="high-score">High Score: <span id="highScore">0</span></div>
+      <div class="score">Score: <span id="score">0</span></div>
+      <div class="timer">Time Left: <span id="time">30</span>s</div>
+    </div>
+
+
+    <!-- How to Play Button -->
+<button class="howto-btn" onclick="toggleInstructions()">📖 How to Play</button>
+
+<!-- Instructions Box -->
+<div id="instructions" class="instructions-box" style="display: none;">
+  <p><strong>How to Play:</strong></p>
+  <ul>
+    <li>🐞 Click on bugs to feed the frog!</li>
+    <li>🌶️ Watch out for spicy bugs – they make the frog burp!</li>
+    <li>⏰ The game lasts 30 seconds. Try to beat your high score!</li>
+  </ul>
+</div>
+
+    <!-- Replay Button -->
+    <button id="replayBtn" class="replay-btn" onclick="startGame()">🔁 Replay</button>
+  </div>
+
+  <script src="assets/js/frog.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+    </script>
+    
+    <script>
+      function toggleInstructions() {
+        const box = document.getElementById("instructions");
+        box.style.display = box.style.display === "none" ? "block" : "none";
+      }
+    </script>    
+</body>
+</html>
