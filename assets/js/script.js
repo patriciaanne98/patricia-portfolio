@@ -32,3 +32,4 @@ function showAdvice(mood) {
     document.getElementById("adviceDisplay").textContent = moodAdvice[randomIndex];
   }
   
+  

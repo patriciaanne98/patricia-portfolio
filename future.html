@@ -136,10 +136,10 @@
 <section class="case-images">
     <div class="split-showcase">
       <div class="left-panel">
-        <img src="assets/img/future.jpg" alt="EchoSync Web Design">
+        <img src="assets/img/future.jpg" alt="EchoSync Web Design" class="responsive-img zoomable">
       </div>
       <div class="right-panel">
-        <img src="assets/img/future-5.jpg" alt="EchoSync UI Mobile">
+        <img src="assets/img/future-5.jpg" alt="EchoSync UI Mobile" class="responsive-img zoomable">
       </div>
     </div>
   </section>
@@ -147,10 +147,10 @@
   <section class="case-images">
     <div class="split-showcase">
       <div class="left-panel">
-        <img src="assets/img/future-6.png" alt="EchoSync Web Design">
+        <img src="assets/img/future-6.png" alt="EchoSync Web Design" class="responsive-img zoomable">
       </div>
       <div class="right-panel">
-        <img src="assets/img/future-3.jpg" alt="EchoSync UI Mobile">
+        <img src="assets/img/future-3.jpg" alt="EchoSync UI Mobile" class="responsive-img zoomable">
       </div>
     </div>
   </section>
@@ -158,10 +158,10 @@
   <section class="case-images">
     <div class="split-showcase">
       <div class="left-panel">
-        <img src="assets/img/future-4.jpg" alt="EchoSync Web Design">
+        <img src="assets/img/future-4.jpg" alt="EchoSync Web Design" class="responsive-img zoomable">
       </div>
       <div class="right-panel">
-        <img src="assets/img/future-2.jpg" alt="EchoSync UI Mobile">
+        <img src="assets/img/future-2.jpg" alt="EchoSync UI Mobile" class="responsive-img zoomable">
       </div>
     </div>
   </section>
@@ -169,10 +169,10 @@
   <section class="case-images">
     <div class="split-showcase">
       <div class="left-panel">
-        <img src="assets/img/future-7.png" alt="EchoSync Web Design">
+        <img src="assets/img/future-7.png" alt="EchoSync Web Design" class="responsive-img zoomable">
       </div>
       <div class="right-panel">
-        <img src="assets/img/future-8.png" alt="EchoSync UI Mobile">
+        <img src="assets/img/future-8.png" alt="EchoSync UI Mobile" class="responsive-img zoomable">
       </div>
     </div>
   </section>
@@ -180,10 +180,10 @@
   <section class="case-images">
     <div class="split-showcase">
       <div class="left-panel">
-        <img src="assets/img/future-2.jpg" alt="EchoSync Web Design">
+        <img src="assets/img/future-2.jpg" alt="EchoSync Web Design" class="responsive-img zoomable">
       </div>
       <div class="right-panel">
-        <img src="assets/img/future-9.png" alt="EchoSync UI Mobile">
+        <img src="assets/img/future-9.png" alt="EchoSync UI Mobile" class="responsive-img zoomable">
       </div>
     </div>
   </section>
@@ -207,7 +207,29 @@
       });
     }
   </script>
-  
+  <!-- Modal Lightbox -->
+<div id="zoomModal" class="zoom-modal" onclick="closeZoom()">
+  <img id="zoomedImg" src="" alt="Zoomed Image">
+</div>
+
+<script>
+  const zoomables = document.querySelectorAll('.zoomable');
+  const zoomModal = document.getElementById('zoomModal');
+  const zoomedImg = document.getElementById('zoomedImg');
+
+  zoomables.forEach(img => {
+    img.addEventListener('click', () => {
+      zoomedImg.src = img.src;
+      zoomModal.classList.add('show');
+    });
+  });
+
+  function closeZoom() {
+    zoomModal.classList.remove('show');
+    zoomedImg.src = '';
+  }
+</script>
+
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById("navLinks");
