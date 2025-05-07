@@ -211,5 +211,26 @@
     .sketch-gallery {
         grid-template-columns: 1fr;
       }
+
+
+  .sketch-frame {
+    width: 100%;
+    padding-top: 130%; /* taller ratio = smoother layout */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    background: #111;
+    position: relative;
+  }
+  
+  .sketch-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
   }
   
