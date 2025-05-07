@@ -40,8 +40,14 @@ function setup() {
 function draw() {
   drawGradientBackground();
 
-  rotateY(t * 0.0012);
-  rotateX(sin(t * 0.001) * 0.15);
+  let autoRotY = t * 0.0012;
+  let autoRotX = sin(t * 0.001) * 0.15;
+
+  let mouseInfluenceY = map(mouseX, 0, width, -PI / 4, PI / 4);
+  let mouseInfluenceX = map(mouseY, 0, height, -PI / 6, PI / 6);
+
+  rotateY(autoRotY + mouseInfluenceY * 0.25);
+  rotateX(autoRotX + mouseInfluenceX * 0.25);
 
   ambientLight(160);
   pointLight(360, 100, 100, 0, -200, 400);

@@ -6,9 +6,9 @@
   }
   
   body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fdfdfd;
-    color: #111;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #1f1f28, #121212);
+        color: #f4f4f4;
     line-height: 1.6;
     font-size: 16px;
     overflow-x: hidden;
@@ -20,16 +20,18 @@
   }
   
   h1 {
+    font-size: 3rem;
+    color: #fefefe;
     text-align: center;
-    font-size: 2.5rem;
-    color: #352F44;
-    margin-top: 2rem;
+    padding-top: 40px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
   }
   
   .gallery-intro {
     text-align: center;
     font-size: 1.1rem;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 2rem;
   }
   
@@ -113,17 +115,28 @@
   }  
   
   .sketch-item {
-    text-align: center;
+    background-color: #1e1e2f;
+    border-radius: 16px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+  }
+  
+  .sketch-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   }
   
   .sketch-frame {
-    position: relative;
     width: 100%;
     padding-top: 130%; /* taller ratio = smoother layout */
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
+    background: #111;
+    position: relative;
   }
   
   .sketch-frame iframe {
@@ -136,16 +149,19 @@
   }
   
   .sketch-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.3rem;
-    color: #352F44;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    text-align: center;
   }
   
   .sketch-caption {
     font-size: 0.95rem;
-    color: #555;
+    color: #ccc;
+    line-height: 1.5;
     padding: 0 0.5rem;
-    line-height: 1.4;
+    text-align: center;
   }
   
   /* Footer */
