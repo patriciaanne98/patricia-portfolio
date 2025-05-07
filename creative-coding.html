@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Coding by Patricia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/creative-code.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/creative-code.css" />
 </head>
 <body>
   <header class="nav">
     <div class="nav-logo">
       <a href="index.html">Patricia Frogoso</a><span class="logo-sub">designer</span>
     </div>
-
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-
     <nav class="nav-links" id="navLinks">
       <a href="index.html">HOME</a>
       <a href="portfolio.html">PORTFOLIO</a>
@@ -24,104 +22,70 @@
       <a href="contact.html">CONTACT</a>
     </nav>
   </header>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #fefefe;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-    }
-    p {
-      text-align: center;
-      color: #555;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .item {
-      max-width: 500px;
-      text-align: center;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
-<body>
+
   <h1>Creative Coding by Patricia</h1>
-  <p>An art gallery of generative visuals</p>
+  <p class="gallery-intro">An art gallery of generative visuals — crafted with code and emotion.</p>
 
-  <section class="gallery">
+  <section class="sketch-gallery">
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/neonflow1/index.html"></iframe></div>
+      <h3 class="sketch-title">Neon Flow</h3>
+      <p class="sketch-caption">Two hemispheres pulse in mirrored motion. Each connection ripples through color like thought and identity in flux.</p>
+    </div>
 
-    <div class="item">
-        <h2></h2>
-        <iframe src="sketches/neonflow1/index.html"></iframe>
-        <p>Two hemispheres pulse in mirrored motion, each thought a glowing form, each connection a ripple through color. It’s not anatomy — it’s identity, breathing in data and light.</p>
-      </div>
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/wave-visualizer/"></iframe></div>
+      <h3 class="sketch-title">Synesthetic Flow</h3>
+      <p class="sketch-caption">A liquid sculpture of sound and sensation — flowing in rhythm with resonance, pitch, and emotional color.</p>
+    </div>
 
-      <div class="item">
-        <h2></h2>
-        <iframe src="sketches/wave-visualizer/"></iframe>
-        <p>A generative soundwave that dreams. Inspired by how sound feels in the body — not just pressure or pitch, but resonance, color, and texture. Synesthetic Flow is a liquid sculpture of vibration, designed to move you — visually and emotionally.</p>
-      </div>
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/glitch1/index.html"></iframe></div>
+      <h3 class="sketch-title">Digital DNA</h3>
+      <p class="sketch-caption">A slow-turning double helix of particles and memory. It doesn't just look like DNA — it feels like thought.</p>
+    </div>
 
-    <div class="item">
-        <h2></h2>
-        <iframe src="sketches/glitch1/index.html"></iframe>
-        <p>A slow-turning double helix made from glowing particles and flowing bonds. It doesn’t just look like DNA — it feels like a memory.</p>
-      </div>
-      
-      <div class="item">
-        <h2></h2>
-        <iframe src="sketches/flower1/index.html"></iframe>
-        <p>Imagine if money had no form — only motion. This sketch renders wealth as liquid force: flowing, pulsing, shifting. It’s both intimate and global. It's not about coins or cash, but energy passing between people and systems.</p>
-      </div>
-      
-      <div class="item">
-        <h2></h2>
-        <iframe src="sketches/fractal-tree/index.html"></iframe>
-        <p>In a mist between memory and imagination, a bonsai tree blooms — not with leaves, but with light, thought, and breath. Curved branches ripple like echoing whispers. Petal-glow fragments drift upward, as if time is exhaling. This generative sketch is a meditation on balance, impermanence, and the quiet surrealism of nature recreated through code.</p>
-      </div>
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/flower1/index.html"></iframe></div>
+      <h3 class="sketch-title">Liquid Wealth</h3>
+      <p class="sketch-caption">Imagine if money had no form — only motion. This sketch renders value as a fluid force between systems.</p>
+    </div>
 
-      <div class="item">
-        <h2></h2>
-        <iframe src="sketches/kaleido1/"></iframe>
-        <p>In a mist between memory and imagination, a bonsai tree blooms — not with leaves, but with light, thought, and breath. Curved branches ripple like echoing whispers. Petal-glow fragments drift upward, as if time is exhaling. This generative sketch is a meditation on balance, impermanence, and the quiet surrealism of nature recreated through code.</p>
-      </div>
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/fractal-tree/index.html"></iframe></div>
+      <h3 class="sketch-title">Light Bonsai</h3>
+      <p class="sketch-caption">A bonsai tree that blooms with particles and silence. This is meditation coded into light and structure.</p>
+    </div>
 
-      <div class="item">
-        <h2></h2>
-        <iframe src="sketches/orbit-system/"></iframe>
-        <p>A generative meditation on reflection, distortion, and identity. It uses layered visual echoes — warped and spiraling forms — to represent the recursive loops of thought, doubt, and revelation. Each composition is a moment of inner noise, trapped and visualized.</p>
-      </div>
-      
-      <div class="item">
-        <h2></h2>
-        <iframe src="sketches/dna-helix/"></iframe>
-        <p>A generative stained-glass mosaic animated by light itself. Each shard pulses with memory and meaning — a quiet cathedral built from pixels and breath.</p>
-      </div>
-      <div class="item">
-        <h2></h2>
-        <iframe src="sketches/orange/"></iframe>
-        <p>A plumpy red chili pepper floats gently in space — pulsing with life, spinning slowly like it’s caught in a dream. Its seeds shimmer with subtle sparkle, while leafy green petals sway in rhythm. This generative sketch brings flavor to life through breath-like motion, combining softness, rhythm, and play in a visual meditation on organic forms.</p>
-        </div>
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/kaleido1/"></iframe></div>
+      <h3 class="sketch-title">Kaleido Sequence</h3>
+      <p class="sketch-caption">A living palette machine inspired by brands like A24 and MUJI. It shifts, composes, and reimagines design logic.</p>
+    </div>
 
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/orbit-system/"></iframe></div>
+      <h3 class="sketch-title">Echo System</h3>
+      <p class="sketch-caption">A meditation on identity through warped spirals and reflection. Every shape is a loop of thought made visible.</p>
+    </div>
+
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/dna-helix/"></iframe></div>
+      <h3 class="sketch-title">Cathedral Code</h3>
+      <p class="sketch-caption">A generative stained-glass mosaic animated by light itself. Each shard pulses with meaning and memory.</p>
+    </div>
+
+    <div class="sketch-item">
+      <div class="sketch-frame"><iframe src="sketches/orange/"></iframe></div>
+      <h3 class="sketch-title">Cyber Citrus</h3>
+      <p class="sketch-caption">A plump digital fruit floats like a coded orb. It pulses, spins, and glows with juicy surrealism.</p>
+    </div>
   </section>
 
   <footer class="footer">
     <p>&copy; 2025 Patricia Frogoso — All rights reserved.</p>
   </footer>
+
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById("navLinks");
