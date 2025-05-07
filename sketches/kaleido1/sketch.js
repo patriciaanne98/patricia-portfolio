@@ -66,3 +66,4 @@ function drawComplexTile(size) {
   noStroke();
   ellipse(0, 0, 6, 6);
 }
+
