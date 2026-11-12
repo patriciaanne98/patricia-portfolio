@@ -1,0 +1,1071 @@
+
+:root {
+  --purple: #37008f;
+  --white: #ffffff;
+  --gray: #dedede;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--purple);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ffbd59;
+  outline-offset: 4px;
+}
+
+/* NAVIGATION MENU */
+
+.navbar {
+  min-height: 88px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAVIGATION LOGO */
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.logo a {
+  color: #000000;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 730px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6%;
+  padding: 55px 10% 75px;
+}
+
+.hero-text h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(62px, 7.4vw, 124px);
+  font-weight: 400;
+  letter-spacing: -0.085em;
+  line-height: 0.84;
+  margin: 0 0 100px;
+
+  text-align: center;
+}
+
+/* HOMEPAGE - CENTER TAGLINE */
+
+.hero-text p {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+ color: #000000;
+  width: 100%;
+  max-width: none;
+
+  margin: 0 auto;
+}
+
+.portrait {
+  width: min(100%, 390px);
+  height: 530px;
+  margin: auto;
+  background: var(--purple);
+  padding: 0 22px;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ABOUT - HOME PAGE */
+
+.about {
+  background: #37008f;
+  color: white;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 9%;
+
+  padding: 110px 11%;
+  align-items: start;
+}
+
+.about h2 {
+  font-size: clamp(98px, 10vw, 78px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.about-text {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.about-text p {
+  margin: 0 0 22px;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* READ MORE LINK */
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 20px;
+  padding-bottom: 6px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+
+  border-bottom: 2px solid white;
+  text-decoration: none;
+
+  transition: gap 0.25s ease, opacity 0.25s ease;
+}
+
+.read-more:hover {
+  gap: 22px;
+  opacity: 0.8;
+}
+
+
+/* ABOUT MOBILE */
+
+@media (max-width: 700px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 60px 7%;
+  }
+
+  .about h2 {
+    font-size: clamp(44px, 10vw, 65px);
+  }
+
+  .about-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* SELECTED WORK */
+
+.work {
+  padding: 90px 11% 110px;
+  background: #ffffff;
+}
+
+.section-title {
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+
+  margin: 20px 70px 100px;
+  padding: 0;
+}
+
+
+/* FULL-WIDTH PROJECT LAYOUT */
+
+.work {
+  padding: 90px 0 70px;
+  width: 100%;
+}
+
+/* Keep the heading indented */
+.section-title {
+  padding: 0 5.7%;
+  margin-bottom: 90px;
+}
+
+/* ==================================
+   IMMERSIVE PROJECT SECTIONS
+================================== */
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  height: auto;
+  min-height: 650px;
+  margin: 0;
+}
+
+/* PURPLE IMAGE SIDE */
+
+
+/* PURPLE IMAGE SIDE */
+
+.project-image {
+  background: #37008f;
+  padding: 45px;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+
+  /* CENTER IMAGE */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+/* WHITE TEXT SIDE */
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 22px;
+
+  padding: 70px 12%;
+  background: rgb(241, 241, 241);
+  color: #000000;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.project-info p {
+  max-width: 400px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ALTERNATING SIDES */
+
+.project.reverse .project-image {
+  order: 2;
+}
+
+.project.reverse .project-info {
+  order: 1;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .project {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .project-image,
+  .project.reverse .project-image {
+    order: 1;
+    padding: 25px;
+  }
+
+  .project-info,
+  .project.reverse .project-info {
+    order: 2;
+    padding: 50px 7%;
+  }
+}
+
+
+/* MORE PROJECTS - HOMEPAGE */
+
+.more-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 7%;
+  background: #ffffff;
+}
+
+.more-projects-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #37008f;
+  font-size: clamp(16px, 3vw, 28px);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid #37008f;
+  padding-bottom: 15px;
+}
+
+.more-projects-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .more-projects {
+    padding: 70px 7%;
+  }
+
+  .more-projects-link {
+    font-size: 20px;
+    gap: 12px;
+  }
+}
+
+
+/* FOOTER */
+
+footer {
+  background: var(--purple);
+  color: white;
+  min-height: 300px;
+  padding: 65px 5% 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer h2 {
+  font-size: clamp(26px, 4vw, 58px);
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+footer p {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 20px 5%;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 7% 65px;
+    gap: 50px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(60px, 13vw, 100px);
+    margin-bottom: 35px;
+  }
+
+  .hero-text p {
+    text-align: left;
+  }
+
+  .portrait {
+    height: 390px;
+    max-width: 330px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px 7%;
+  }
+
+  .about h2 {
+    font-size: clamp(48px, 11vw, 74px);
+  }
+
+  .section-title {
+    padding: 30px 7%;
+    font-size: 23px;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image,
+  .project.reverse .project-image {
+    order: 1;
+    min-height: 280px;
+    padding: 18px;
+  }
+
+  .project-info,
+  .project.reverse .project-info {
+    order: 2;
+    min-height: 130px;
+    padding: 24px 7%;
+  }
+
+  .project-info h3 {
+    font-size: 21px;
+  }
+
+ 
+
+/* MORE PROJECTS - HOMEPAGE */
+
+.more-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 110px 7%;
+  background-color: #ffffff;
+}
+
+.more-projects .more-projects-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #37008f;
+  font-size: clamp(22px, 3vw, 40px);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid #37008f;
+  padding-bottom: 12px;
+}
+
+.more-projects .more-projects-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .more-projects {
+    padding: 75px 7%;
+  }
+
+  .more-projects .more-projects-link {
+    font-size: 20px;
+    gap: 12px;
+  }
+}
+
+
+  footer {
+    min-height: 280px;
+    padding: 45px 7% 25px;
+  }
+}
+
+
+
+
+
+/* ==========================================
+   WORK PAGE - HERO & FEATURED PROJECT
+========================================== */
+
+/* WORK HERO */
+
+.work-page .work-hero {
+  min-height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.work-page .work-hero h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(80px, 9vw, 140px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: #37008f;
+  margin: 0;
+}
+
+/* CATEGORY NAVIGATION */
+
+.work-page .work-categories {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding: 25px 7% 85px;
+}
+
+.work-page .work-categories a {
+  color: #37008f;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.work-page .work-categories a.active,
+.work-page .work-categories a:hover {
+  border-bottom-color: #37008f;
+}
+
+/* FEATURED PROJECT */
+
+.work-page .featured-project {
+  width: 100%;
+  margin: 0;
+}
+
+.work-page .featured-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 0 7% 40px;
+  color: #37008f;
+}
+
+.work-page .featured-heading h2,
+.work-page .featured-heading p {
+  font-size: clamp(20px, 2.2vw, 32px);
+  font-weight: 800;
+  margin: 0;
+}
+
+/* FULL-WIDTH BLACKROCK IMAGE */
+
+.work-page .featured-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.work-page .featured-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* LAVENDER HOVER EFFECT */
+
+.work-page .image-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(195, 170, 235, 0.48);
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.work-page .image-overlay span {
+  color: #37008f;
+  font-size: clamp(22px, 3vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  transform: translateY(15px);
+  transition: transform 0.35s ease;
+}
+
+.work-page .featured-image:hover .image-overlay,
+.work-page .featured-image:focus-visible .image-overlay {
+  opacity: 1;
+}
+
+.work-page .featured-image:hover .image-overlay span,
+.work-page .featured-image:focus-visible .image-overlay span {
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .work-page .work-hero {
+    min-height: 330px;
+  }
+
+  .work-page .work-hero h1 {
+    font-size: 80px;
+  }
+
+  .work-page .work-categories {
+    gap: 20px;
+    padding: 25px 7% 55px;
+    flex-wrap: wrap;
+  }
+
+  .work-page .work-categories a {
+    font-size: 11px;
+  }
+
+  .work-page .featured-heading {
+    padding: 0 7% 25px;
+  }
+
+  .work-page .featured-heading h2,
+  .work-page .featured-heading p {
+    font-size: 17px;
+  }
+}
+
+@media (hover: none) {
+  .work-page .image-overlay {
+    inset: auto 0 0;
+    padding: 15px;
+    opacity: 1;
+    background: rgba(220, 208, 240, 0.9);
+  }
+
+  .work-page .image-overlay span {
+    font-size: 18px;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-page .image-overlay,
+  .work-page .image-overlay span {
+    transition: none;
+  }
+}
+
+
+
+/* ==========================================
+   WORK PAGE - PROJECT GALLERY
+========================================== */
+
+/* PROJECT TITLES */
+
+.featured-heading a,
+.gallery-project h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured-heading a:hover,
+.gallery-project h2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* TWO-COLUMN GALLERY */
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 0;
+  row-gap: 100px;
+  padding: 90px 0 120px;
+}
+
+/* INDIVIDUAL PROJECT */
+
+.gallery-project {
+  min-width: 0;
+}
+
+.gallery-project h2 {
+  min-height: 90px;
+  margin: 0;
+  padding: 0 7% 35px;
+
+  color: #37008f;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+/* PROJECT IMAGES */
+
+.gallery-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: #37008f;
+}
+
+.gallery-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* STAGGERED IMAGE POSITION */
+
+.gallery-project.offset .gallery-image {
+  margin-top: 60px;
+}
+
+/* LAVENDER HOVER */
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(195, 170, 235, 0.48);
+  color: #37008f;
+
+  font-size: clamp(18px, 2vw, 30px);
+  font-weight: 800;
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-image:hover .gallery-overlay,
+.gallery-image:focus-visible .gallery-overlay {
+  opacity: 1;
+}
+
+/* CATEGORY HEADINGS */
+
+.category-heading {
+  padding: 80px 7% 0;
+}
+
+.category-heading h2 {
+  margin: 0;
+  color: #37008f;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .work-gallery {
+    grid-template-columns: 1fr;
+    row-gap: 55px;
+    padding: 60px 0 80px;
+  }
+
+  .gallery-project h2 {
+    min-height: 0;
+    padding: 0 7% 25px;
+    font-size: 21px;
+  }
+
+  .gallery-project.offset .gallery-image {
+    margin-top: 0;
+  }
+
+  .category-heading {
+    padding: 55px 7% 0;
+  }
+
+  .gallery-overlay {
+    font-size: 20px;
+  }
+}
+
+@media (hover: none) {
+  .gallery-overlay {
+    inset: auto 0 0;
+    padding: 15px;
+    opacity: 1;
+    background: rgba(220, 208, 240, 0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-overlay {
+    transition: none;
+  }
+}
+
+
+/* ==========================================
+   WORK PAGE - EDITORIAL PROJECT LAYOUT
+========================================== */
+
+/* PROJECT CONTAINER */
+
+.work-page .editorial-project {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* IMAGE CONTAINER */
+
+.work-page .editorial-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  background: #37008f;
+  text-decoration: none;
+}
+
+/* FULL-WIDTH IMAGES - NO CROPPING */
+
+.work-page .editorial-image:not(.editorial-split) > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* WHILMA'S - TWO IMAGES SIDE BY SIDE */
+
+.work-page .editorial-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+
+/* WHILMA'S - TWO PHOTOS SIDE BY SIDE */
+
+.work-page .editorial-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.work-page .editorial-split > img {
+  display: block;
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* LEFT PHOTO - SHOW MORE OF RESTAURANT */
+
+.work-page .editorial-split > img:first-child {
+  object-position: center center;
+}
+
+/* RIGHT PHOTO - FOCUS ON FAMILY */
+
+.work-page .editorial-split > img:nth-child(2) {
+  object-position: center center;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .work-page .editorial-split > img {
+    height: 450px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .work-page .editorial-split {
+    grid-template-columns: 1fr;
+  }
+
+  .work-page .editorial-split > img {
+    height: 350px;
+  }
+}
+
+
+/* ==========================================
+   HOVER OVERLAY
+========================================== */
+
+.work-page .editorial-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 30px;
+  text-align: center;
+
+  background: rgba(195, 170, 235, 0.68);
+  color: #37008f;
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* CENTER PROJECT TITLE */
+
+.work-page .editorial-overlay h2 {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 60px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.work-page .editorial-overlay span {
+  font-size: clamp(13px, 1.4vw, 18px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* HOVER EFFECT */
+
+.work-page .editorial-image:hover .editorial-overlay,
+.work-page .editorial-image:focus-visible .editorial-overlay {
+  opacity: 1;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .work-page .editorial-split > img {
+    height: 600px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  /* STACK WHILMA'S IMAGES */
+
+  .work-page .editorial-split {
+    grid-template-columns: 1fr;
+  }
+
+  .work-page .editorial-split > img {
+    height: 380px;
+  }
+
+  /* SHOW PROJECT NAME ON MOBILE */
+
+  .work-page .editorial-overlay {
+    inset: auto 0 0;
+    padding: 22px 7%;
+    gap: 8px;
+    opacity: 1;
+    background: rgba(220, 208, 240, 0.94);
+  }
+
+  .work-page .editorial-overlay h2 {
+    font-size: 21px;
+  }
+
+  .work-page .editorial-overlay span {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   TOUCH DEVICES
+========================================== */
+
+@media (hover: none) {
+
+  .work-page .editorial-overlay {
+    inset: auto 0 0;
+    padding: 22px 7%;
+    gap: 8px;
+    opacity: 1;
+    background: rgba(220, 208, 240, 0.94);
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-page .editorial-overlay {
+    transition: none;
+  }
+}
