@@ -1,344 +1,198 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Work | Patricia Frogoso</title>
 
-  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- STYLESHEET -->
   <link rel="stylesheet" href="assets/css/styles.css">
-
 </head>
 
 <body class="work-page">
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
-
+  <!-- NAVIGATION -->
   <header class="navbar" id="top">
-
-    <a href="index.html" class="logo">
-      Patricia Frogoso
-    </a>
+    <a href="index.html" class="logo">Patricia Frogoso</a>
 
     <nav aria-label="Main navigation">
       <a href="work.html" aria-current="page">WORK</a>
       <a href="about.html">ABOUT</a>
-      <a href="assets/resume.pdf" target="_blank" rel="noopener">
-        RESUME
-      </a>
+      <a href="resume.html">RESUME</a>
       <a href="#contact">CONTACT</a>
     </nav>
-
   </header>
-
 
   <main>
 
-    <!-- =========================
-         WORK HERO
-    ========================== -->
-
-    <section class="work-hero">
-
+    <!-- HERO -->
+    <section class="work-library-hero">
       <h1>Work</h1>
+      <p>
+        Selected projects across marketing, digital strategy,
+        design, and research.
+      </p>
 
+      <!-- FILTERS -->
+      <div class="project-filters" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">ALL PROJECTS</button>
+        <button class="filter-btn" type="button" data-filter="marketing" aria-pressed="false">MARKETING</button>
+        <button class="filter-btn" type="button" data-filter="digital-strategy" aria-pressed="false">DIGITAL STRATEGY</button>
+        <button class="filter-btn" type="button" data-filter="design" aria-pressed="false">DESIGN</button>
+        <button class="filter-btn" type="button" data-filter="research" aria-pressed="false">RESEARCH</button>
+      </div>
     </section>
 
+    <!-- PROJECT LIBRARY -->
+    <section class="project-library" aria-label="Selected projects">
 
-    <!-- =========================
-         CATEGORY NAVIGATION
-    ========================== -->
+      <!-- BLACKROCK -->
+      <article class="library-project" data-category="marketing research">
+        <a href="projects/blackrock.html" class="library-project-link">
+          <div class="library-thumbnail">
+            <img src="assets/img/blackrock-work-img.png" alt="BlackRock iBonds Advisor Center">
+          </div>
+          <div class="library-details">
+            <span class="library-category">MARKETING · RESEARCH</span>
+            <h2>BLACKROCK</h2>
+            <p>Product Marketing · Financial Services</p>
+            <span class="library-arrow">VIEW PROJECT ↗</span>
+          </div>
+        </a>
+      </article>
 
-    <nav class="work-categories" aria-label="Project categories">
+      <!-- WHILMA'S -->
+      <article class="library-project" data-category="marketing">
+        <a href="projects/whilmas.html" class="library-project-link">
+          <div class="library-thumbnail">
+            <img src="assets/img/whilma.png" alt="Whilma's Filipino Restaurant">
+          </div>
+          <div class="library-details">
+            <span class="library-category">MARKETING</span>
+            <h2>WHILMA'S FILIPINO RESTAURANT</h2>
+            <p>Brand Marketing · Growth Strategy</p>
+            <span class="library-arrow">VIEW PROJECT ↗</span>
+          </div>
+        </a>
+      </article>
 
-      <a href="#marketing" class="active">
-        MARKETING
-      </a>
+      <!-- PATRICIA'S PILATES -->
+      <article class="library-project" data-category="marketing">
+        <a href="projects/pilates.html" class="library-project-link">
+          <div class="library-thumbnail">
+            <img src="assets/pilates.jpg" alt="Patricia's Pilates branding and marketing">
+          </div>
+          <div class="library-details">
+            <span class="library-category">MARKETING</span>
+            <h2>PATRICIA'S PILATES</h2>
+            <p>Branding · Content Marketing</p>
+            <span class="library-arrow">VIEW PROJECT ↗</span>
+          </div>
+        </a>
+      </article>
 
-      <a href="#digital-strategy">
-        DIGITAL STRATEGY
-      </a>
+      <!-- LIQUID WEALTH -->
+      <article class="library-project" data-category="digital-strategy research">
+        <a href="projects/liquid-wealth.html" class="library-project-link">
+          <div class="library-thumbnail">
+            <img src="assets/liquidwealth.jpg" alt="Liquid Wealth financial education blog">
+          </div>
+          <div class="library-details">
+            <span class="library-category">DIGITAL STRATEGY · RESEARCH</span>
+            <h2>LIQUID WEALTH</h2>
+            <p>Financial Education · Digital Storytelling</p>
+            <span class="library-arrow">VIEW PROJECT ↗</span>
+          </div>
+        </a>
+      </article>
 
-      <a href="#design">
-        DESIGN
-      </a>
+      <!-- LITTLE RED RIVER FOUNDATION -->
+      <article class="library-project" data-category="digital-strategy design">
+        <a href="projects/lrrf.html" class="library-project-link">
+          <div class="library-thumbnail">
+            <img src="assets/lrrf.jpg" alt="Little Red River Foundation website">
+          </div>
+          <div class="library-details">
+            <span class="library-category">DIGITAL STRATEGY · DESIGN</span>
+            <h2>LITTLE RED RIVER FOUNDATION</h2>
+            <p>Web Development · Digital Strategy</p>
+            <span class="library-arrow">VIEW PROJECT ↗</span>
+          </div>
+        </a>
+      </article>
 
-    </nav>
+      <!-- HISTORY OF JP MORGAN -->
+      <article class="library-project" data-category="design research">
+        <a href="projects/jpmorgan.html" class="library-project-link">
+          <div class="library-thumbnail">
+            <img src="assets/jpmorgan.jpg" alt="History of JP Morgan website design">
+          </div>
+          <div class="library-details">
+            <span class="library-category">DESIGN · RESEARCH</span>
+            <h2>HISTORY OF JP MORGAN</h2>
+            <p>Web Design · Historical Research</p>
+            <span class="library-arrow">VIEW PROJECT ↗</span>
+          </div>
+        </a>
+      </article>
 
-
-    <!-- =========================
-         MARKETING
-    ========================== -->
-
-    <section id="marketing" class="work-category">
-
-
-    
-<!-- BLACKROCK: FULL WIDTH -->
-
-<article class="editorial-project">
-  <a href="projects/blackrock.html"
-     class="editorial-image"
-     aria-label="View BlackRock project">
-
-    <img src="assets/img/blackrock-work-img.png"
-         alt="BlackRock iBonds Advisor Center">
-
-    <div class="editorial-overlay">
-      <h2>BLACKROCK</h2>
-      <span>VIEW PROJECT ↗</span>
-    </div>
-  </a>
-</article>
-
-
-<!-- WHILMA'S: TWO IMAGES -->
-
-<article class="editorial-project">
-  <a href="projects/whilmas.html"
-     class="editorial-image editorial-split"
-     aria-label="View Whilma's Filipino Restaurant project">
-
-    <img src="assets/img/whilma.png"
-         alt="Whilma's Small Business Revolution feature">
-
-    <img src="assets/img/whilmas-family.jpg"
-         alt="Whilma's Filipino Restaurant family">
-
-    <div class="editorial-overlay">
-      <h2>WHILMA'S FILIPINO RESTAURANT</h2>
-      <span>VIEW PROJECT ↗</span>
-    </div>
-  </a>
-</article>
-
-
-<!-- PATRICIA'S PILATES: FULL WIDTH -->
-
-<article class="editorial-project">
-  <a href="projects/pilates.html"
-     class="editorial-image"
-     aria-label="View Patricia's Pilates project">
-
-    <img src="assets/pilates.jpg"
-         alt="Patricia's Pilates branding and marketing">
-
-    <div class="editorial-overlay">
-      <h2>PATRICIA'S PILATES</h2>
-      <span>VIEW PROJECT ↗</span>
-    </div>
-  </a>
-</article>
-
-
-    <!-- =========================
-         DIGITAL STRATEGY
-    ========================== -->
-
-    <section id="digital-strategy" class="work-category">
-
-      <div class="category-heading">
-        <h2>DIGITAL STRATEGY</h2>
-      </div>
-
-      <div class="work-gallery">
-
-
-        <!-- LIQUID WEALTH -->
-
-        <article class="gallery-project">
-
-          <h2>
-            <a href="projects/liquid-wealth.html">
-              LIQUID WEALTH
-            </a>
-          </h2>
-
-          <a
-            href="projects/liquid-wealth.html"
-            class="gallery-image"
-            aria-label="View Liquid Wealth case study"
-          >
-
-            <img
-              src="assets/liquidwealth.jpg"
-              alt="Liquid Wealth financial education blog"
-              loading="lazy"
-            >
-
-            <span class="gallery-overlay">
-              VIEW PROJECT ↗
-            </span>
-
-          </a>
-
-        </article>
-
-
-        <!-- LITTLE RED RIVER FOUNDATION -->
-
-        <article class="gallery-project offset">
-
-          <h2>
-            <a href="projects/lrrf.html">
-              LITTLE RED RIVER FOUNDATION
-            </a>
-          </h2>
-
-          <a
-            href="projects/lrrf.html"
-            class="gallery-image"
-            aria-label="View Little Red River Foundation project"
-          >
-
-            <img
-              src="assets/lrrf.jpg"
-              alt="Little Red River Foundation website project"
-              loading="lazy"
-            >
-
-            <span class="gallery-overlay">
-              VIEW PROJECT ↗
-            </span>
-
-          </a>
-
-        </article>
-
-      </div>
+      <!-- BLUEPRINT -->
+      <article class="library-project" data-category="design">
+        <a href="projects/blueprint.html" class="library-project-link">
+          <div class="library-thumbnail">
+            <img src="assets/blueprint.jpg" alt="Blueprint nonprofit website">
+          </div>
+          <div class="library-details">
+            <span class="library-category">DESIGN</span>
+            <h2>BLUEPRINT</h2>
+            <p>UI/UX Design · Nonprofit Website</p>
+            <span class="library-arrow">VIEW PROJECT ↗</span>
+          </div>
+        </a>
+      </article>
 
     </section>
-
-
-    <!-- =========================
-         DESIGN
-    ========================== -->
-
-    <section id="design" class="work-category">
-
-      <div class="category-heading">
-        <h2>DESIGN</h2>
-      </div>
-
-      <div class="work-gallery">
-
-
-        <!-- JP MORGAN -->
-
-        <article class="gallery-project">
-
-          <h2>
-            <a href="projects/jpmorgan.html">
-              HISTORY OF JP MORGAN
-            </a>
-          </h2>
-
-          <a
-            href="projects/jpmorgan.html"
-            class="gallery-image"
-            aria-label="View JP Morgan website project"
-          >
-
-            <img
-              src="assets/jpmorgan.jpg"
-              alt="History of JP Morgan website design"
-              loading="lazy"
-            >
-
-            <span class="gallery-overlay">
-              VIEW PROJECT ↗
-            </span>
-
-          </a>
-
-        </article>
-
-
-        <!-- BLUEPRINT -->
-
-        <article class="gallery-project offset">
-
-          <h2>
-            <a href="projects/blueprint.html">
-              BLUEPRINT
-            </a>
-          </h2>
-
-          <a
-            href="projects/blueprint.html"
-            class="gallery-image"
-            aria-label="View Blueprint nonprofit website design"
-          >
-
-            <img
-              src="assets/blueprint.jpg"
-              alt="Blueprint nonprofit website design"
-              loading="lazy"
-            >
-
-            <span class="gallery-overlay">
-              VIEW PROJECT ↗
-            </span>
-
-          </a>
-
-        </article>
-
-      </div>
-
-    </section>
-
   </main>
 
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
+  <!-- FOOTER -->
   <footer id="contact">
-
     <h2>LET'S MAKE SOMETHING GREAT.</h2>
 
     <div class="footer-links">
-
-      <a href="mailto:psfrogoso@ualr.edu">
-        EMAIL ME ↗
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/patricia-frogoso1998/"
-        target="_blank"
-        rel="noopener"
-      >
-        LINKEDIN ↗
-      </a>
-
-      <a href="#top">
-        BACK TO TOP ↑
-      </a>
-
+      <a href="mailto:psfrogoso@ualr.edu">EMAIL ME ↗</a>
+      <a href="https://www.linkedin.com/in/patricia-frogoso1998/" target="_blank" rel="noopener">LINKEDIN ↗</a>
+      <a href="#top">BACK TO TOP ↑</a>
     </div>
 
-    <p>
-      © 2026 Patricia Frogoso
-    </p>
-
+    <p>© 2026 Patricia Frogoso</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- FILTER SCRIPT -->
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".library-project");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const selected = button.dataset.filter;
+
+        filterButtons.forEach(btn => {
+          const active = btn === button;
+          btn.classList.toggle("active", active);
+          btn.setAttribute("aria-pressed", String(active));
+        });
+
+        projects.forEach(project => {
+          const categories = project.dataset.category.split(" ");
+          project.hidden = selected !== "all" && !categories.includes(selected);
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

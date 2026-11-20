@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Patricia Frogoso — experience in financial services, product marketing, digital strategy, and technology.">
+
+  <title>Resume | Patricia Frogoso</title>
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  
+<link rel="stylesheet" href="assets/css/styles.css">
+
+
+  <style>
+
+    /* ==========================================
+       GLOBAL STYLES
+    ========================================== */
+
+    :root {
+      --purple: #37008f;
+      --ink: #202020;
+      --muted: #62616a;
+      --line: #e6e1eb;
+      --paper: #ffffff;
+      --soft: #f7f5fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* NAVIGATION LOGO */
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+    color: #000000;
+}
+
+.logo a {
+  color: #000000;
+}
+
+.navbar {
+  min-height: 88px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+
+    .nav-links a[aria-current="page"] {
+      color: var(--purple);
+      text-decoration: underline;
+      text-underline-offset: 7px;
+    }
+
+    /* ==========================================
+       MAIN CONTENT
+    ========================================== */
+
+    main {
+      max-width: 1170px;
+      margin: auto;
+      padding: 0 34px 100px;
+    }
+
+  
+/* RESUME HERO - EDITORIAL STYLE */
+
+.resume-hero {
+  padding: 110px 0 85px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.resume-hero h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(80px, 9vw, 140px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: #37008f;
+  margin: 0 0 30px;
+}
+
+.resume-hero .intro {
+  max-width: 700px;
+  margin: 0 0 35px;
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.6;
+  color: #37008f;
+}
+
+.resume-hero .eyebrow {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .resume-hero {
+    padding: 75px 0 65px;
+  }
+
+  .resume-hero h1 {
+    font-size: clamp(64px, 13vw, 90px);
+    margin-bottom: 24px;
+  }
+
+  .resume-hero .intro {
+    font-size: 16px;
+  }
+}
+
+
+    /* ==========================================
+       RESUME BUTTONS
+    ========================================== */
+
+    .resume-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .resume-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--purple);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .resume-btn.primary {
+      background: var(--purple);
+      color: #ffffff;
+    }
+
+    .resume-btn.secondary {
+      color: var(--purple);
+    }
+
+    .resume-btn:hover {
+      background: #23005d;
+      color: #ffffff;
+    }
+
+    /* ==========================================
+       SECTION HEADINGS
+    ========================================== */
+
+    .resume-section {
+      padding: 66px 0 0;
+    }
+
+    .resume-section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+      margin-bottom: 14px;
+    }
+
+    .resume-section-heading h2 {
+      font-size: clamp(23px, 3vw, 35px);
+      letter-spacing: -0.045em;
+      line-height: 1.2;
+      margin: 0;
+      color: var(--purple);
+    }
+
+    .resume-section-heading small {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ==========================================
+       PROFESSIONAL EXPERIENCE
+    ========================================== */
+
+    .experience {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 160px;
+      gap: 25px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .role {
+      font-size: 21px;
+      line-height: 1.3;
+      margin: 0 0 5px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+
+    .company {
+      font-weight: 700;
+      color: var(--purple);
+      font-size: 14px;
+    }
+
+    .location {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .dates {
+      text-align: right;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .experience ul {
+      padding-left: 19px;
+      margin: 14px 0 0;
+    }
+
+    .experience li {
+      margin: 8px 0;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* ==========================================
+       VIEW ALL EXPERIENCE BUTTON
+    ========================================== */
+
+    .more-wrap {
+      text-align: center;
+      padding-top: 28px;
+    }
+
+    .more-button {
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid var(--purple);
+      padding: 8px 0 11px;
+      color: var(--purple);
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+
+    .more-button:hover {
+      opacity: 0.7;
+    }
+
+    /* ==========================================
+       EDUCATION AND CERTIFICATIONS
+    ========================================== */
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .detail {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail h3 {
+      font-size: 17px;
+      margin: 0 0 5px;
+      letter-spacing: -0.02em;
+    }
+
+    .detail p {
+      font-size: 14px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* ==========================================
+       SKILLS
+    ========================================== */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 28px 0;
+    }
+
+    .skill {
+      font-size: 13px;
+      padding: 9px 13px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    /* ==========================================
+       FOOTER
+    ========================================== */
+
+    .resume-contact {
+      margin-top: 85px;
+      padding: 50px;
+      background: var(--purple);
+      color: #ffffff;
+    }
+
+    .resume-contact h2 {
+      font-size: clamp(28px, 5vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+      margin: 0 0 25px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .contact-links a {
+      font-size: 13px;
+      font-weight: 800;
+      text-underline-offset: 5px;
+    }
+
+    .copyright {
+      margin-top: 35px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    /* ==========================================
+       MOBILE RESPONSIVE
+    ========================================== */
+
+    @media (max-width: 700px) {
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      main {
+        padding: 0 7% 65px;
+      }
+
+      .resume-hero {
+        padding: 65px 0 55px;
+      }
+
+      .resume-hero h1 {
+        font-size: clamp(65px, 17vw, 100px);
+      }
+
+      .resume-section {
+        padding-top: 50px;
+      }
+
+      .experience {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 25px 0;
+      }
+
+      .dates {
+        text-align: left;
+        grid-row: 1;
+        font-size: 12px;
+      }
+
+      .role {
+        font-size: 19px;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .resume-contact {
+        margin-top: 60px;
+        padding: 35px 25px;
+      }
+    }
+
+    /* ==========================================
+       PRINT STYLES
+    ========================================== */
+
+    @media print {
+
+      .site-nav,
+      .resume-actions,
+      .more-wrap,
+      .resume-contact {
+        display: none !important;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .resume-hero {
+        padding: 0 0 20px;
+      }
+
+      .resume-hero h1 {
+        font-size: 48px;
+      }
+
+      .resume-section {
+        padding-top: 25px;
+      }
+
+      .experience {
+        break-inside: avoid;
+        padding: 13px 0;
+      }
+
+      .experience li {
+        font-size: 11px;
+        margin: 3px 0;
+      }
+
+      .resume-section-heading h2 {
+        font-size: 20px;
+      }
+
+      .details-grid {
+        gap: 25px;
+      }
+
+      .skill {
+        padding: 3px 6px;
+        font-size: 10px;
+      }
+    }
+
+
+/* MATCH NAVIGATION ACROSS ALL PAGES */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+  padding: 0 5%;
+  background: #ffffff;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar nav a {
+  color: #37008f;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.navbar nav a:hover,
+.navbar nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 5%;
+  }
+
+  .navbar nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .navbar nav a {
+    font-size: 12px;
+  }
+}
+
+  </style>
+</head>
+
+<body id="top">
+
+
+<!-- NAVIGATION -->
+<header class="navbar" id="top">
+
+  <a href="index.html" class="logo">
+    Patricia Frogoso
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="work.html">WORK</a>
+    <a href="about.html">ABOUT</a>
+    <a href="resume.html" aria-current="page">RESUME</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+</header>
+
+  <main>
+
+    <!-- RESUME HERO -->
+    <section class="resume-hero">
+
+      <div class="eyebrow">
+        Experience / Education / Skills
+      </div>
+
+      <h1>Resume</h1>
+
+      <p class="intro">
+         Experience across financial services, product marketing,
+  and technology.
+      </p>
+
+      <div class="resume-actions">
+
+        <a
+          href="resume.pdf"
+          class="resume-btn primary"
+          target="_blank"
+          rel="noopener">
+          VIEW RESUME PDF ↗
+        </a>
+
+        <a
+          href="resume.pdf"
+          class="resume-btn secondary"
+          download="Patricia_Frogoso_Resume.pdf">
+          DOWNLOAD PDF ↓
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="resume-section" aria-labelledby="experience-title">
+
+      <div class="resume-section-heading">
+        <h2 id="experience-title">Professional Experience</h2>
+        <small>Selected roles + more</small>
+      </div>
+
+      <!-- EXPERIENCES ARE GENERATED BY JAVASCRIPT -->
+      <div id="experience-list"></div>
+
+      <div class="more-wrap">
+        <button
+          id="more-button"
+          class="more-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="experience-list">
+          VIEW ALL EXPERIENCE ↓
+        </button>
+      </div>
+
+    </section>
+
+    <!-- EDUCATION AND CERTIFICATIONS -->
+    <div class="details-grid">
+
+      <section class="resume-section" aria-labelledby="education-title">
+
+        <div class="resume-section-heading">
+          <h2 id="education-title">Education</h2>
+        </div>
+
+        <div class="detail">
+
+          <h3>University of Arkansas at Little Rock</h3>
+
+          <p>
+            B.A. Web Design &amp; Development ·
+            Minor in Information Technology
+          </p>
+
+          <p>
+            Expected December 2026 · GPA 4.0 · Summa Cum Laude
+          </p>
+
+          <p>
+            Chancellor's List · Dean's List ·
+            AI Hackathon Finalist (2025)
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="resume-section" aria-labelledby="cert-title">
+
+        <div class="resume-section-heading">
+          <h2 id="cert-title">Certifications</h2>
+        </div>
+
+        <div class="detail">
+          <h3>Google Data Analytics Professional Certificate</h3>
+          <p>2025</p>
+        </div>
+
+        <div class="detail">
+          <h3>Bloomberg Finance Fundamentals</h3>
+          <p>2025</p>
+        </div>
+
+        <div class="detail">
+          <h3>NVIDIA — Building LLM Applications with Prompt Engineering</h3>
+          <p>2025</p>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- SKILLS -->
+    <section class="resume-section" aria-labelledby="skills-title">
+
+      <div class="resume-section-heading">
+        <h2 id="skills-title">Tools &amp; Areas of Experience</h2>
+      </div>
+
+      <div class="skills" id="skills-list"></div>
+
+    </section>
+
+    <!-- FOOTER -->
+   <section class="resume-contact" id="contact">
+
+      <h2>Let's make something great.</h2>
+
+      <div class="contact-links">
+
+        <a href="mailto:psfrogoso@ualr.edu">
+          EMAIL ME ↗
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/patricia-frogoso1998/"
+          target="_blank"
+          rel="noopener">
+          LINKEDIN ↗
+        </a>
+
+        <a href="#top">
+          BACK TO TOP ↑
+        </a>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Patricia Frogoso
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       EDITABLE RESUME DATA
+  ========================================== -->
+
+  <script>
+
+    /*
+      HOW TO EDIT YOUR EXPERIENCE:
+
+      featured: true
+      = Shows the job immediately.
+
+      featured: false
+      = Shows the job after clicking
+        "VIEW ALL EXPERIENCE".
+
+      To add a job:
+      Copy one complete {...} entry,
+      paste it into the experiences array,
+      and edit the details.
+    */
+
+    const experiences = [
+
+      /* BLACKROCK */
+      {
+        title: 'Summer Analyst, U.S. Wealth Advisory, Product Marketing',
+        company: 'BlackRock',
+        location: 'New York, NY',
+        dates: 'Jun – Aug 2026',
+        featured: true,
+
+        bullets: [
+          'Collaborated with management and product strategy teams on Figma wireframes and advisor-focused messaging for a webpage published on BlackRock’s Advisor Center.',
+
+          'Developed AI-driven marketing recommendations for a $100B+ AUM Treasury ETF, including an investor persona, and presented to Managing Directors.',
+
+          'Conducted competitor analysis for a $50B+ fixed-income ETF platform to inform product positioning.',
+
+          'Created email campaign content and digital assets translating investment concepts into clear advisor communications.'
+        ]
+      },
+
+      /* RE/MAX */
+      {
+        title: 'Intern',
+        company: 'RE/MAX Properties',
+        location: 'Little Rock, AR',
+        dates: 'Sep 2026 – Present',
+        featured: true,
+
+        bullets: [
+          'Created social content for Instagram, TikTok, and Facebook to support property marketing and rental promotions.',
+
+          'Maintained short-term rental listings and availability across Airbnb and VRBO.',
+
+          'Compared marketing platforms, including XpressDocs and Realtor.com, on cost, reach, and lead-generation potential.'
+        ]
+      },
+
+      /* EVERTECH */
+      {
+        title: 'Intern, Growth Marketing & Automation',
+        company: 'Evertech Solutions',
+        location: 'Remote',
+        dates: 'Jul – Oct 2025',
+        featured: true,
+
+        bullets: [
+          'Researched early-stage companies and analyzed HubSpot prospects to identify business development opportunities.',
+
+          'Used HubSpot, n8n, and AI-assisted automation to segment leads and personalize outreach, contributing to a 15% increase in response rates.',
+
+          'Built a website using Framer and Relume, applying keyword and competitor research to SEO and GEO content planning.'
+        ]
+      },
+
+      /* WHILMA'S */
+      {
+        title: 'Digital Marketing',
+        company: 'Whilma’s Filipino Restaurant',
+        location: 'Searcy, AR',
+        dates: 'Aug 2019 – Present',
+        featured: true,
+
+        bullets: [
+          'Managed Facebook and Instagram marketing, using engagement data to refine content and posting schedules.',
+
+          'Collaborated with production and business advisory teams from Small Business Revolution on marketing and business discussions.',
+
+          'Drove 3× audience growth and a 40% increase in customer foot traffic through data-informed social campaigns following the show’s feature.'
+        ]
+      },
+
+      /* PILATES - EXPANDABLE */
+      {
+        title: 'Certified Pilates Instructor',
+        company: 'Clubhaus Fitness',
+        location: 'Little Rock, AR',
+        dates: 'Jan 2020 – Present',
+        featured: false,
+
+        bullets: [
+          'Built and maintained a private client base through personalized instruction, referrals, and long-term relationships.'
+        ]
+      }
+
+    ];
+
+    /*
+      EDIT YOUR SKILLS HERE.
+      Add or remove skill names as needed.
+    */
+
+    const skills = [
+      'Financial Services & ETFs',
+      'Product Marketing',
+      'Competitive Analysis',
+      'Digital Strategy',
+      'Figma',
+      'HubSpot',
+      'n8n',
+      'Framer',
+      'Relume',
+      'Excel',
+      'SEO & GEO',
+      'Marketing Automation',
+      'Web Design & Development',
+      'Social Media Analytics'
+    ];
+
+    /* ==========================================
+       EXPERIENCE DISPLAY
+    ========================================== */
+
+    const list = document.getElementById('experience-list');
+    const button = document.getElementById('more-button');
+
+    let showAll = false;
+
+    // Prevent entered text from being treated as HTML.
+    const escapeHtml = (text) =>
+      String(text).replace(/[&<>"']/g, (character) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[character]));
+
+    function renderExperiences() {
+
+      const visibleExperiences = experiences.filter(
+        experience => showAll || experience.featured
+      );
+
+      list.innerHTML = visibleExperiences.map(experience => `
+
+        <article class="experience">
+
+          <div>
+
+            <h3 class="role">
+              ${escapeHtml(experience.title)}
+            </h3>
+
+            <div class="company">
+
+              ${escapeHtml(experience.company)}
+
+              <span class="location">
+                · ${escapeHtml(experience.location)}
+              </span>
+
+            </div>
+
+            <ul>
+
+              ${experience.bullets.map(bullet => `
+                <li>${escapeHtml(bullet)}</li>
+              `).join('')}
+
+            </ul>
+
+          </div>
+
+          <div class="dates">
+            ${escapeHtml(experience.dates)}
+          </div>
+
+        </article>
+
+      `).join('');
+
+      button.hidden = experiences.every(
+        experience => experience.featured
+      );
+
+      button.textContent = showAll
+        ? 'SHOW LESS ↑'
+        : 'VIEW ALL EXPERIENCE ↓';
+
+      button.setAttribute(
+        'aria-expanded',
+        String(showAll)
+      );
+
+    }
+
+    button.addEventListener('click', () => {
+      showAll = !showAll;
+      renderExperiences();
+    });
+
+    /* ==========================================
+       SKILLS DISPLAY
+    ========================================== */
+
+    document.getElementById('skills-list').innerHTML =
+      skills.map(skill => `
+        <span class="skill">${escapeHtml(skill)}</span>
+      `).join('');
+
+    renderExperiences();
+
+  </script>
+
+</body>
+</html>
