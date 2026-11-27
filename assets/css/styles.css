@@ -237,25 +237,27 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 22px;
-  padding: 70px 12%;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  padding: 60px 8%;
   background: #f1f1f1;
   color: #000000;
 }
 
 .project-info h3 {
   margin: 0;
-  font-size: clamp(30px, 3vw, 48px);
+  font-size: clamp(26px, 3vw, 48px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
 .project-info p {
-  max-width: 400px;
+  max-width: 100%;
   margin: 0;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .project.reverse .project-image {
@@ -428,7 +430,8 @@ footer p {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.4s ease;
 }
 
@@ -1241,4 +1244,178 @@ footer p {
   .about-page .scholarship-item h3 {
     font-size: 16px;
   }
+}
+
+
+/* ==========================================
+   PORTFOLIO ANIMATIONS
+========================================== */
+
+/* HERO ENTRANCE */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HOMEPAGE HERO */
+
+.hero-text {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.portrait {
+  animation: fadeUp 0.8s ease-out 0.15s both;
+}
+
+/* WORK PAGE HERO */
+
+.work-page .work-library-hero h1 {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.work-page .work-library-hero p {
+  animation: fadeUp 0.8s ease-out 0.1s both;
+}
+
+.work-page .project-filters {
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+
+/* SCROLL REVEAL */
+
+.reveal-ready {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.65s ease-out,
+    transform 0.65s ease-out;
+}
+
+.reveal-ready.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOMEPAGE PROJECT IMAGE HOVER */
+
+.project-image img {
+  transition: transform 0.4s ease;
+}
+
+/* SUBTLE HOVER INTERACTIONS */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .project-image:hover img {
+    transform: scale(1.025);
+  }
+
+  .work-page .library-project-link:hover
+  .library-thumbnail img {
+    transform: scale(1.025);
+  }
+
+  .work-page .library-arrow {
+    transition: transform 0.25s ease;
+  }
+
+  .work-page .library-project-link:hover
+  .library-arrow {
+    transform: translateX(4px);
+  }
+
+}
+
+/* NAVIGATION UNDERLINE */
+
+.navbar nav a {
+  position: relative;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.navbar nav a:hover {
+  text-decoration: none;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* WORK PAGE FILTER TRANSITION */
+
+.work-page .filter-btn {
+  transition:
+    border-color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* ACCESSIBILITY — REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-text,
+  .portrait,
+  .work-page .work-library-hero h1,
+  .work-page .work-library-hero p,
+  .work-page .project-filters {
+    animation: none;
+  }
+
+  .reveal-ready {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .project-image img,
+  .work-page .library-thumbnail img,
+  .work-page .library-arrow,
+  .navbar nav a::after,
+  .work-page .filter-btn {
+    transition: none;
+  }
+
+  .project-image:hover img,
+  .work-page .library-project-link:hover
+  .library-thumbnail img,
+  .work-page .library-project-link:hover
+  .library-arrow {
+    transform: none;
+  }
+
+}
+
+/* PILATES — BRAND & VISUAL IDENTITY */
+
+.pilates-page .case-gallery-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #f5f3ef;
 }
