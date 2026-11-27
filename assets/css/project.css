@@ -2032,3 +2032,578 @@ body.lightbox-open {
   }
 
 }
+
+
+/* =========================
+   PILATES — CLIENT EXPERIENCE
+========================= */
+
+.pilates-page .pilates-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.pilates-page .pilates-experience-grid figure {
+  margin: 0;
+  min-width: 0;
+}
+
+/* Consistent Image Frames */
+
+.pilates-page .pilates-experience-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+
+  object-fit: contain;
+  object-position: center;
+
+  background-color: #e7dfd5;
+  border: 1px solid #dedbd6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Image Captions */
+
+.pilates-page .pilates-experience-grid figcaption {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555555;
+  text-align: left;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 700px) {
+
+  .pilates-page .pilates-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pilates-page .pilates-experience-grid img {
+    padding: 15px;
+  }
+
+}
+
+/* =========================
+   PILATES — DIGITAL EXPERIENCE
+========================= */
+
+.pilates-page .pilates-digital-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+/* Consistent Card Frames */
+
+/* =========================
+   PILATES — DIGITAL EXPERIENCE
+========================= */
+
+.pilates-page .digital-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #e7dfd5;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Consistent Image Sizing */
+
+.pilates-page .digital-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  border: none;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 700px) {
+  .pilates-page .digital-frame {
+    padding: 15px;
+  }
+}
+
+/* Light and Dark Mode */
+
+.pilates-page .theme-showcase {
+  gap: 30px;
+}
+
+.pilates-page .theme-example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.pilates-page .theme-example img {
+  display: block;
+  width: 130px;
+  max-width: 100%;
+  height: 130px;
+  aspect-ratio: 1 / 1;
+
+  object-fit: contain;
+  background-color: #101010;
+  border: none;
+  border-radius: 0;
+}
+
+.pilates-page .theme-example span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #796958;
+}
+
+/* Video Library Screenshot */
+
+.pilates-page .video-showcase img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 700px) {
+
+  .pilates-page .pilates-digital-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pilates-page .digital-frame {
+    padding: 20px;
+  }
+
+  .pilates-page .theme-showcase {
+    gap: 20px;
+  }
+
+  .pilates-page .theme-example img {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+
+
+
+/* ==========================================
+   LIQUID WEALTH PROJECT
+========================================== */
+
+.liquid-wealth-page {
+  --case-feature: #062b98;
+  --case-accent: #062b98;
+}
+
+
+/* ==========================================
+   PROJECT LINKS
+========================================== */
+
+.liquid-wealth-page .case-link {
+  color: var(--case-accent);
+  border-bottom-color: var(--case-accent);
+}
+
+
+/* ==========================================
+   ARTICLE GALLERY
+========================================== */
+
+.liquid-wealth-page .lw-article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.liquid-wealth-page .lw-article-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #e3e8ee;
+}
+
+.liquid-wealth-page .lw-article-grid h4 {
+  margin: 15px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--case-text);
+}
+
+.liquid-wealth-page .lw-article-grid figcaption p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--case-muted);
+}
+
+
+/* ==========================================
+   CONTENT STRATEGY
+========================================== */
+
+.liquid-wealth-page .lw-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.liquid-wealth-page .lw-topic {
+  padding: 25px 0;
+  border-top: 2px solid var(--case-accent);
+}
+
+.liquid-wealth-page .lw-topic span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--case-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.liquid-wealth-page .lw-topic h4 {
+  margin: 0 0 12px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--case-text);
+}
+
+.liquid-wealth-page .lw-topic p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--case-muted);
+}
+
+
+/* ==========================================
+   WEBSITE SHOWCASE
+========================================== */
+
+.liquid-wealth-page .lw-website-showcase {
+  width: 100%;
+}
+
+.liquid-wealth-page .lw-website-showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==========================================
+   IMAGE PLACEHOLDERS
+========================================== */
+
+.liquid-wealth-page .lw-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 25px;
+  background: #e3e8ee;
+  border: 1px solid var(--case-border);
+  color: var(--case-muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.liquid-wealth-page .lw-wide {
+  aspect-ratio: 16 / 9;
+}
+
+
+/* ==========================================
+   EDUCATIONAL RESOURCES
+========================================== */
+
+.liquid-wealth-page .case-gallery-grid img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #e3e8ee;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 900px) {
+
+  .liquid-wealth-page .lw-article-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 700px) {
+
+  .liquid-wealth-page .lw-article-grid,
+  .liquid-wealth-page .lw-topic-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .liquid-wealth-page .lw-topic {
+    padding: 20px 0;
+  }
+
+  .liquid-wealth-page .lw-placeholder {
+    padding: 20px;
+  }
+
+}
+
+/* ==========================================
+   LIQUID WEALTH — INTERACTIVE ARTICLE CARDS
+========================================== */
+
+.liquid-wealth-page .lw-article-grid {
+  align-items: stretch;
+}
+
+.liquid-wealth-page .lw-article-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--case-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+/* ==========================================
+   ARTICLE IMAGES
+========================================== */
+
+.liquid-wealth-page .lw-article-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.liquid-wealth-page .lw-article-card .lw-article-image img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+
+/* ==========================================
+   ARTICLE TITLES
+========================================== */
+
+.liquid-wealth-page .lw-article-card h4 {
+  margin: 16px 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--case-text);
+  transition: color 0.3s ease;
+}
+
+
+/* ==========================================
+   ARTICLE CATEGORIES
+========================================== */
+
+.liquid-wealth-page .lw-article-category {
+  margin: 0 0 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--case-muted);
+}
+
+
+/* ==========================================
+   READ ARTICLE LINK
+========================================== */
+
+.liquid-wealth-page .lw-read-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  border-bottom: 1px solid transparent;
+  color: var(--case-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.liquid-wealth-page .lw-read-link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+
+/* ==========================================
+   HOVER INTERACTIONS
+========================================== */
+
+@media (hover: hover) {
+
+  .liquid-wealth-page .lw-article-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .liquid-wealth-page .lw-article-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .liquid-wealth-page .lw-article-card:hover h4 {
+    color: var(--case-accent);
+  }
+
+  .liquid-wealth-page .lw-article-card:hover .lw-read-link {
+    color: var(--case-accent);
+    border-bottom-color: var(--case-accent);
+  }
+
+  .liquid-wealth-page .lw-article-card:hover .lw-read-link span {
+    transform: translate(3px, -3px);
+  }
+
+}
+
+
+/* ==========================================
+   KEYBOARD ACCESSIBILITY
+========================================== */
+
+.liquid-wealth-page .lw-article-card:focus-visible {
+  outline: 2px solid var(--case-accent);
+  outline-offset: 6px;
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .liquid-wealth-page .lw-article-card,
+  .liquid-wealth-page .lw-article-card img,
+  .liquid-wealth-page .lw-read-link span {
+    transition: none;
+  }
+
+  .liquid-wealth-page .lw-article-card:hover,
+  .liquid-wealth-page .lw-article-card:hover img,
+  .liquid-wealth-page .lw-article-card:hover .lw-read-link span {
+    transform: none;
+  }
+
+}
+
+/* ==========================================
+   LIQUID WEALTH — EDUCATIONAL RESOURCES
+========================================== */
+
+.liquid-wealth-page .lw-resources-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.liquid-wealth-page .lw-resources-grid figcaption {
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--case-muted);
+}
+
+
+/* ==========================================
+   LIQUID WEALTH — LIVE WEBSITE SHOWCASE
+========================================== */
+
+.liquid-wealth-page .lw-live-website {
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--case-border);
+}
+
+.liquid-wealth-page .lw-live-website iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .liquid-wealth-page .lw-live-website {
+    height: 650px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .liquid-wealth-page .lw-live-website {
+    height: 550px;
+  }
+
+}
