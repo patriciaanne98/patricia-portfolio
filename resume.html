@@ -527,6 +527,188 @@
 
     }
 
+    /* RESUME FILE ACTIONS */
+
+.resume-file-actions {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.resume-view-button,
+.resume-dropdown-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 66px;
+  padding: 20px 30px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid #37008f;
+  transition: background 0.25s ease;
+}
+
+.resume-view-button {
+  background: #37008f;
+  color: #ffffff;
+}
+
+.resume-view-button:hover {
+  background: #240060;
+  color: #ffffff;
+}
+
+.resume-dropdown-button {
+  background: #ffffff;
+  color: #37008f;
+  gap: 24px;
+}
+
+.resume-dropdown-button:hover {
+  background: #f3eff8;
+}
+
+@media (max-width: 600px) {
+
+  .resume-file-actions {
+    gap: 12px;
+  }
+
+  .resume-view-button,
+  .resume-dropdown-button {
+    font-size: 13px;
+    padding: 16px 22px;
+    min-height: 56px;
+  }
+
+}
+
+/* DOWNLOAD DROPDOWN FIX */
+
+.resume-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+}
+
+.resume-dropdown-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+}
+
+.resume-dropdown-button::-webkit-details-marker {
+  display: none;
+}
+
+.resume-dropdown:not([open]) .resume-dropdown-menu {
+  display: none;
+}
+
+.resume-dropdown[open] .resume-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #37008f;
+  border-top: none;
+  z-index: 100;
+  box-shadow: 0 8px 20px rgba(55, 0, 143, 0.08);
+}
+
+.resume-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #37008f;
+  text-decoration: none;
+}
+
+.resume-dropdown-menu a + a {
+  border-top: 1px solid #e6e1eb;
+}
+
+.resume-dropdown-menu a:hover {
+  background: #f3eff8;
+}
+
+
+/* RESUME DROPDOWN ICONS */
+
+.resume-dropdown-button .dropdown-arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.resume-dropdown[open] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.resume-dropdown-menu .download-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #37008f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-dropdown-button .dropdown-arrow {
+    transition: none;
+  }
+}
+
+
+/* COMPACT RESUME BUTTONS */
+
+.resume-view-button,
+.resume-dropdown-button {
+  min-height: 48px;
+  padding: 12px 22px;
+  font-size: 12px;
+  gap: 10px;
+}
+
+.resume-dropdown {
+  width: 175px;
+}
+
+.resume-dropdown-button .dropdown-arrow {
+  width: 18px;
+  height: 18px;
+}
+
+.resume-dropdown-menu a {
+  padding: 12px 14px;
+  font-size: 12px;
+}
+
+.resume-dropdown-menu .download-icon {
+  width: 16px;
+  height: 16px;
+}
+
   </style>
 
 </head>
@@ -567,22 +749,79 @@
     and technology.
   </p>
 
-  <div class="resume-actions">
+<div class="resume-file-actions">
 
-    <a href="assets/pdf/Frogoso_Patricia_Official_Resume.pdf"
-       class="resume-btn primary"
-       target="_blank"
-       rel="noopener">
-      VIEW RESUME PDF ↗
-    </a>
+  <a href="assets/pdf/Frogoso_Patricia_Official_Resume.pdf"
+     class="resume-view-button"
+     target="_blank"
+     rel="noopener noreferrer">
+    VIEW RESUME ↗
+  </a>
 
-    <a href="assets/pdf/Frogoso_Patricia_Official_Resume.pdf"
-       class="resume-btn secondary"
-       download="Patricia_Frogoso_Resume.pdf">
-      DOWNLOAD PDF ↓
-    </a>
+  <details class="resume-dropdown">
 
-  </div>
+    <summary class="resume-dropdown-button">
+
+      DOWNLOAD
+
+      <svg class="dropdown-arrow"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           aria-hidden="true">
+        <path d="m6 9 6 6 6-6"/>
+      </svg>
+
+    </summary>
+
+    <div class="resume-dropdown-menu">
+
+      <a href="assets/pdf/Frogoso_Patricia_Official_Resume.pdf"
+         download>
+        PDF Document
+
+        <svg class="download-icon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M12 3v12"/>
+          <path d="m7 10 5 5 5-5"/>
+          <path d="M5 16v4h14v-4"/>
+        </svg>
+
+      </a>
+
+      <a href="assets/pdf/Frogoso_Patricia_Official_Resume.docx"
+         download>
+        Word Document
+
+        <svg class="download-icon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M12 3v12"/>
+          <path d="m7 10 5 5 5-5"/>
+          <path d="M5 16v4h14v-4"/>
+        </svg>
+
+      </a>
+
+    </div>
+
+  </details>
+
+</div>
 
 </section>
 
