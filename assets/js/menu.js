@@ -150,3 +150,14 @@
     if (event.matches) setOpen(false);
   });
 })();
+
+/* Keep arrows from turning into emoji on iPhones */
+(() => {
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let textNode;
+  while ((textNode = walker.nextNode())) {
+    if (textNode.nodeValue.includes("\u2197")) {
+      textNode.nodeValue = textNode.nodeValue.replace(/\u2197(?!\uFE0E)/g, "\u2197\uFE0E");
+    }
+  }
+})();
