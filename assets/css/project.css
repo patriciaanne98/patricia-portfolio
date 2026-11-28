@@ -4652,3 +4652,14 @@ body.lightbox-open {
   }
 
 }
+
+/* AI RESEARCH: tighten gap above "03 / Publication" on phones */
+@media (max-width: 700px) {
+  .ai-research-page .research-publication {
+    padding-top: 15px;
+  }
+
+  .ai-research-page section:has(+ .research-publication) {
+    padding-bottom: 25px;
+  }
+}
