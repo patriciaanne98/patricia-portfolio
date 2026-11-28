@@ -182,3 +182,24 @@
     node.replaceWith(...holder.childNodes);
   });
 })();
+
+
+/* Draw arrows as a small icon so they never turn into emoji */
+(() => {
+  const icon = '<svg viewBox="0 0 12 12" width="0.72em" height="0.72em" aria-hidden="true" style="display:inline-block;vertical-align:0.02em;overflow:visible"><path d="M2.5 9.5 9.5 2.5M3.8 2.5h5.7v5.7" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>';
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const found = [];
+
+  while (walker.nextNode()) {
+    if (walker.currentNode.nodeValue.includes("\u2197")) found.push(walker.currentNode);
+  }
+
+  found.forEach((node) => {
+    if (node.parentElement.closest("script, style, textarea")) return;
+    const holder = document.createElement("span");
+    holder.innerHTML = node.nodeValue
+      .replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]))
+      .replace(/\u2197\uFE0E?/g, icon);
+    node.replaceWith(...holder.childNodes);
+  });
+})();
