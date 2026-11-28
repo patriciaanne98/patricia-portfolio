@@ -203,3 +203,28 @@
     node.replaceWith(...holder.childNodes);
   });
 })();
+
+
+/* Resume download dropdown: close when tapping elsewhere or picking a file */
+(() => {
+  const dropdowns = document.querySelectorAll("details.resume-dropdown");
+  if (!dropdowns.length) return;
+
+  document.addEventListener("pointerdown", (event) => {
+    dropdowns.forEach((dropdown) => {
+      if (dropdown.open && !dropdown.contains(event.target)) dropdown.open = false;
+    });
+  });
+
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", (event) => {
+      if (event.target.closest(".resume-dropdown-menu a")) {
+        setTimeout(() => { dropdown.open = false; }, 150);
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") dropdowns.forEach((dropdown) => { dropdown.open = false; });
+  });
+})();
