@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Creative Coding | Patricia Frogoso</title>
+
+  <meta name="description"
+        content="A collection of creative coding experiments exploring generative art, programming, animation, and digital experiences.">
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+
+  <style>
+
+    /* CREATIVE CODING */
+
+    .creative-page .case-category {
+      color: #37008f;
+    }
+
+    .creative-hero-image {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .creative-section {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+
+    .creative-section-header {
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .creative-section-header h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      letter-spacing: -0.04em;
+      margin: 12px 0 20px;
+    }
+
+    .creative-section-header p {
+      color: #62616a;
+      line-height: 1.8;
+    }
+
+    .creative-label {
+      color: #37008f;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 48px 30px;
+    }
+
+    .creative-card {
+      min-width: 0;
+    }
+
+    .creative-frame {
+      background: #0b0d18;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .creative-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .creative-frame-label {
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .creative-info {
+      padding: 20px 0;
+    }
+
+    .creative-number {
+      color: #37008f;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .creative-info h3 {
+      font-size: 24px;
+      margin: 8px 0;
+      letter-spacing: -0.03em;
+    }
+
+    .creative-info p {
+      font-size: 15px;
+      color: #62616a;
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+
+    .creative-link {
+      color: #37008f;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .creative-link:hover {
+      text-decoration: underline;
+    }
+
+    .creative-focus {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .creative-focus span {
+      background: #f7f5fa;
+      border: 1px solid #e6e1eb;
+      color: #37008f;
+      font-size: 13px;
+      padding: 10px 14px;
+    }
+
+    .creative-reflection {
+      border-top: 1px solid #e6e1eb;
+    }
+
+    @media (max-width: 700px) {
+
+      .creative-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .creative-section {
+        padding: 45px 0;
+      }
+
+      .creative-section-header {
+        margin-bottom: 25px;
+      }
+
+      .creative-info h3 {
+        font-size: 21px;
+      }
+
+    }
+
+    /* FULL-WIDTH IMMERSIVE HERO */
+
+.creative-immersive {
+  position: relative;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: clamp(350px, 48vw, 750px);
+  background: #0b0d18;
+  overflow: hidden;
+  padding: 0;
+}
+
+#creative-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.creative-page {
+  overflow-x: clip;
+}
+
+
+
+/* OVERVIEW SPACING */
+
+.creative-page .case-editorial {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  column-gap: 80px;
+}
+
+.creative-page .case-copy p {
+  line-height: 1.85;
+  margin-bottom: 28px;
+}
+
+.creative-page .creative-focus {
+  gap: 12px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.creative-page .creative-focus span {
+  padding: 12px 18px;
+}
+
+.creative-page .case-copy .case-link {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* MOBILE SPACING */
+
+@media (max-width: 700px) {
+
+  .creative-page .case-editorial {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    gap: 25px;
+  }
+
+  .creative-page .creative-focus {
+    gap: 8px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .creative-page .creative-focus span {
+    padding: 10px 12px;
+  }
+
+}
+
+
+/* CONSISTENT SECTION ALIGNMENT */
+
+.creative-page .creative-section {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 0 80px;
+}
+
+.creative-page .creative-gallery-heading {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.creative-page .creative-gallery-heading p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+
+  .creative-page .creative-section {
+    padding-bottom: 45px;
+  }
+
+  .creative-page .creative-gallery-heading {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+
+/* INTERACTIVE ART GALLERY */
+
+.creative-page .creative-grid {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 5%;
+  gap: 65px 32px;
+}
+
+.creative-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.creative-instruction {
+  display: block;
+  font-size: 13px;
+  color: #37008f;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .creative-page .creative-grid {
+    grid-template-columns: 1fr;
+    padding: 0 7%;
+    gap: 40px;
+  }
+}
+
+  </style>
+
+</head>
+
+<body class="project-page creative-page">
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar" id="top">
+
+    <a href="../index.html" class="logo">
+      Patricia Frogoso
+    </a>
+
+    <nav aria-label="Main navigation">
+
+      <a href="../work.html" aria-current="page">WORK</a>
+      <a href="../about.html">ABOUT</a>
+      <a href="../resume.html">RESUME</a>
+      <a href="#contact">CONTACT</a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- PROJECT HERO -->
+
+    <section class="case-hero">
+
+      <a href="../work.html" class="case-back">
+        ← BACK TO WORK
+      </a>
+
+      <p class="case-category">
+        TECHNOLOGY · PROGRAMMING
+      </p>
+
+      <h1>Creative Coding</h1>
+
+      <p class="case-subtitle">
+        Exploring the relationship between programming,
+        mathematical patterns, motion, and visual expression.
+      </p>
+
+      <div class="case-meta">
+
+        <div>
+          <span>ROLE</span>
+          <p>Creative Developer</p>
+        </div>
+
+        <div>
+          <span>FOCUS</span>
+          <p>Generative Art & Programming</p>
+        </div>
+
+        <div>
+          <span>YEAR</span>
+          <p>2025</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+   <!-- IMMERSIVE CREATIVE CODING HERO -->
+
+<section class="creative-immersive">
+  <canvas
+    id="creative-canvas"
+    aria-label="Animated generative geometric artwork">
+  </canvas>
+</section>
+
+
+    <!-- PROJECT OVERVIEW -->
+
+    <section class="case-editorial">
+
+      <div class="case-label">
+
+        <span>01 / OVERVIEW</span>
+
+        <h2>Code as a Creative Medium</h2>
+
+      </div>
+
+      <div class="case-copy">
+
+        <p>
+          Creative Coding is a collection of digital experiments
+          exploring how programming can be used beyond traditional
+          applications to create expressive visual experiences.
+        </p>
+
+        <p>
+          Through generative patterns, animation, mathematical
+          relationships, and visual experimentation, this project
+          explores the connection between technical problem-solving
+          and creative thinking.
+        </p>
+
+        <div class="creative-focus">
+
+          <span>Programming</span>
+          <span>Generative Art</span>
+          <span>Computational Thinking</span>
+          <span>Animation</span>
+          <span>Visual Systems</span>
+
+        </div>
+
+        <p>
+
+          <a
+            href="https://patriciaanne98.github.io/old_design_portfolio/creative-coding.html"
+            class="case-link"
+            target="_blank"
+            rel="noopener">
+
+            EXPLORE ORIGINAL COLLECTION ↗
+
+          </a>
+
+        </p>
+
+      </div>
+
+    </section>
+
+<!-- CREATIVE CODING GALLERY -->
+
+<section class="creative-section">
+
+  <div class="case-editorial creative-gallery-heading">
+
+    <div class="case-label">
+      <span>02 / SELECTED WORK</span>
+      <h2>Digital Experiments</h2>
+    </div>
+
+    <div class="case-copy">
+      <p>
+        Interactive explorations of nature, technology,
+        material, and motion through code.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="creative-grid">
+
+    <!-- 01 / FRAGMENTED MATTER -->
+
+    <article class="creative-card">
+
+      <div class="creative-frame">
+
+     <iframe
+  src="../sketches/fragmented-matter/index.html"
+  title="Fragmented Matter"
+  loading="lazy">
+</iframe>
+
+      </div>
+
+      <div class="creative-info">
+
+        <span class="creative-number">
+          01 / EXPERIMENT
+        </span>
+
+        <h3>Fragmented Matter</h3>
+
+        <p>
+          An interactive three-dimensional sculpture
+          exploring fragmentation, movement, and
+          reconstruction through mathematical patterns.
+        </p>
+
+        <span class="creative-instruction">
+          Click the sphere to shatter and reconstruct.
+        </span>
+
+      </div>
+
+    </article>
+
+
+<!-- 02 / ORBITAL SYSTEMS -->
+<article class="creative-card">
+
+  <div class="creative-frame">
+    <iframe
+      src="../sketches/orbital-systems/index.html"
+      title="Orbital Systems"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="creative-info">
+
+    <span class="creative-number">
+      02 / EXPERIMENT
+    </span>
+
+    <h3>Orbital Systems</h3>
+
+    <p>
+      An interactive visualization of over 16,000
+      satellites using public orbital data, mathematical
+      modeling, and real-time position calculations
+      to explore the infrastructure surrounding Earth.
+    </p>
+
+    <span class="creative-instruction">
+      Drag to rotate, hover to explore, and filter
+      by satellite category.
+    </span>
+
+  </div>
+
+</article>
+
+<!-- 03 / DIGITAL DNA -->
+<article class="creative-card">
+
+  <div class="creative-frame">
+    <iframe
+      src="../sketches/digital-dna/index.html"
+      title="Digital DNA"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="creative-info">
+
+    <span class="creative-number">
+      03 / EXPERIMENT
+    </span>
+
+    <h3>Digital DNA</h3>
+
+    <p>
+      An interactive molecular sculpture transforming
+      real human DNA sequence data into a flowing,
+      iridescent double helix through computational
+      geometry and generative animation.
+    </p>
+
+    <span class="creative-instruction">
+      Hover over the molecules to explore nucleotide
+      composition and complementary base pairs.
+    </span>
+
+  </div>
+
+</article>
+
+  </div>
+
+</section>
+
+    <!-- PROGRAMMING EXAMPLES -->
+
+    <section class="case-editorial creative-reflection">
+
+      <div class="case-label">
+
+        <span>03 / BEHIND THE CODE</span>
+
+        <h2>Computational Thinking</h2>
+
+      </div>
+
+      <div class="case-copy">
+
+        <h3>Digital DNA</h3>
+
+        <p>
+          A visual interpretation of a double helix through
+          rotating particles and geometric relationships.
+          This experiment explores how programmed movement
+          can create recognizable visual structures.
+        </p>
+
+        <h3>Neon Flow</h3>
+
+        <p>
+          An exploration of mirrored movement, colored
+          connections, and repeated visual patterns.
+          The experiment combines symmetry and animation
+          to create a continuously evolving composition.
+        </p>
+
+        <a
+          href="https://patriciaanne98.github.io/old_design_portfolio/creative-coding.html"
+          class="case-link"
+          target="_blank"
+          rel="noopener">
+
+          VIEW LIVE EXPERIMENTS ↗
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- REFLECTION -->
+
+    <section class="case-editorial creative-reflection">
+
+      <div class="case-label">
+
+        <span>04 / REFLECTION</span>
+
+        <h2>Beyond the Visual</h2>
+
+      </div>
+
+      <div class="case-copy">
+
+        <p>
+          Creative coding introduced me to a different way
+          of approaching programming. Instead of focusing
+          only on functionality, I explored how code could
+          communicate ideas through movement, structure,
+          and visual expression.
+        </p>
+
+        <p>
+          This collection reflects the relationship between
+          experimentation, problem-solving, and design.
+          It also demonstrates how technical and creative
+          thinking can work together to create meaningful
+          digital experiences.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- BACK TO WORK -->
+
+    <section class="case-next">
+
+      <a href="../work.html">
+        Explore More Work <span>↗</span>
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer id="contact">
+
+    <h2>LET'S MAKE SOMETHING GREAT.</h2>
+
+    <div class="contact-links">
+
+      <a href="mailto:psfrogoso@ualr.edu">
+        EMAIL ME ↗
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/patricia-frogoso1998/"
+        target="_blank"
+        rel="noopener">
+
+        LINKEDIN ↗
+
+      </a>
+
+      <a href="#top">
+        BACK TO TOP ↑
+      </a>
+
+    </div>
+
+    <p>© 2026 Patricia Frogoso</p>
+
+  </footer>
+
+
+  <!-- CREATIVE CODING GALLERY SCRIPT -->
+
+
+  <script>
+  const canvas = document.getElementById('creative-canvas');
+  const ctx = canvas.getContext('2d');
+
+  let width;
+  let height;
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  let offsetX = 0;
+  let offsetY = 0;
+
+  const colors = [
+    '#9166d6',
+    '#38bdcb',
+    '#d061a6'
+  ];
+
+  function resizeCanvas() {
+    width = canvas.clientWidth;
+    height = canvas.clientHeight;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+
+  canvas.addEventListener('pointermove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+
+    mouseX = (event.clientX - rect.left - width / 2) * 0.12;
+    mouseY = (event.clientY - rect.top - height / 2) * 0.12;
+  });
+
+  canvas.addEventListener('pointerleave', () => {
+    mouseX = 0;
+    mouseY = 0;
+  });
+
+  const reducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  );
+
+  function animate(time) {
+
+    ctx.fillStyle = '#0b0d18';
+    ctx.fillRect(0, 0, width, height);
+
+    offsetX += (mouseX - offsetX) * 0.04;
+    offsetY += (mouseY - offsetY) * 0.04;
+
+    const scale = Math.min(width, height * 1.55);
+
+    for (let i = 0; i < 24; i++) {
+
+      const rotation =
+        i * 0.23 +
+        time * 0.00012 +
+        Math.sin(time * 0.0004 + i * 0.1) * 0.2;
+
+      ctx.beginPath();
+
+      ctx.ellipse(
+        width / 2 + offsetX +
+          Math.sin(i * 0.4 + time * 0.00035) * scale * 0.045,
+
+        height / 2 + offsetY,
+
+        scale * (0.21 + i * 0.009),
+
+        scale * (0.09 + i * 0.005),
+
+        rotation,
+        0,
+        Math.PI * 2
+      );
+
+      ctx.strokeStyle = colors[i % colors.length];
+      ctx.globalAlpha = 0.65;
+      ctx.lineWidth = 1.5;
+
+      ctx.stroke();
+    }
+
+    ctx.globalAlpha = 1;
+
+    if (!reducedMotion.matches) {
+      requestAnimationFrame(animate);
+    }
+  }
+
+  resizeCanvas();
+
+  if (reducedMotion.matches) {
+    animate(0);
+
+    window.addEventListener('resize', () => animate(0));
+  } else {
+    requestAnimationFrame(animate);
+  }
+</script>
+
+</body>
+
+</html>
