@@ -1502,3 +1502,109 @@ footer p {
   }
 
 }
+
+
+
+
+
+/* ==========================================
+   MOBILE POLISH
+========================================== */
+
+/* Keep anything from ever sliding sideways on phones */
+body {
+  overflow-x: clip;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 700px) {
+
+  /* NAVIGATION: centered on every page, easier to tap */
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 18px 5% 10px;
+    text-align: center;
+  }
+
+  .navbar nav {
+    justify-content: center;
+    gap: 4px 18px;
+  }
+
+  .navbar nav a {
+    padding: 10px 2px;
+    font-size: 13px;
+  }
+
+  /* HOME HERO: name and tagline lined up in the center */
+  .hero {
+    padding: 40px 7% 60px;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    letter-spacing: -0.06em;
+    margin-bottom: 25px;
+  }
+
+  .hero-text p {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+
+  .portrait {
+    height: 380px;
+    width: min(100%, 320px);
+  }
+
+  /* HOME PROJECTS: a little tighter so each one fits on screen */
+  .project-image,
+  .project.reverse .project-image {
+    min-height: 240px;
+  }
+
+  /* FOOTER: bigger tap targets */
+  .footer-links {
+    gap: 6px 26px;
+  }
+
+  .footer-links a {
+    display: inline-block;
+    padding: 8px 0;
+  }
+
+  /* WORK PAGE FILTERS: easier to tap */
+  .work-page .filter-btn {
+    padding: 8px 0 10px;
+  }
+}
+
+/* SMALL PHONES (iPhone SE and similar) */
+@media (max-width: 380px) {
+
+  .hero-text h1 {
+    font-size: 54px;
+  }
+
+  .about h2 {
+    font-size: 44px;
+  }
+
+  .portrait {
+    height: 340px;
+  }
+
+  .navbar nav {
+    gap: 2px 14px;
+  }
+
+  .navbar nav a {
+    font-size: 12px;
+  }
+}
