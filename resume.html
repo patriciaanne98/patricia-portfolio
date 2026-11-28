@@ -709,6 +709,22 @@
   height: 16px;
 }
 
+.resume-dropdown-button {
+  position: relative;
+  z-index: 102;
+}
+
+.resume-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+}
+
+.resume-dropdown:not([open]) .resume-dropdown-menu {
+  display: none;
+}
+
   </style>
 
 </head>
