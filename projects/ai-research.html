@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Invisible Weight | Patricia Frogoso</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+
+  <style>
+
+    .ai-research-page .back-to-work {
+      display: inline-block;
+      color: #111111;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 35px;
+      text-decoration: none;
+    }
+
+    .ai-research-page .back-to-work:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO ARTWORK */
+
+    .research-artwork {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      overflow: hidden;
+      background: #eeedf0;
+    }
+
+    .research-artwork img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* RESEARCH INSIGHTS */
+
+    .research-insights {
+      padding: 85px 7%;
+      background: #f7f5fa;
+    }
+
+    .research-insights-heading {
+      margin-bottom: 45px;
+    }
+
+    .research-insights-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      margin: 15px 0 0;
+    }
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 35px;
+    }
+
+    .insight-card {
+      padding: 30px 0;
+      border-top: 1px solid #cfc5df;
+    }
+
+    .insight-number {
+      display: block;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(38px, 5vw, 65px);
+      font-weight: 400;
+      color: #37008f;
+      margin-bottom: 25px;
+    }
+
+    .insight-card h3 {
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 0 0 15px;
+    }
+
+    .insight-card p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #444444;
+      margin: 0;
+    }
+
+    .insights-note {
+      font-size: 12px;
+      line-height: 1.7;
+      color: #666666;
+      margin-top: 30px;
+    }
+
+    /* PUBLICATION */
+
+    .research-publication {
+      padding: 90px 7%;
+    }
+
+    .publication-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      border: 1px solid #dedede;
+      padding: 45px;
+      margin-top: 30px;
+    }
+
+    .publication-panel h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 400;
+      line-height: 1.3;
+      margin: 15px 0;
+    }
+
+    .publication-panel p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #666666;
+    }
+
+    .publication-button {
+      display: inline-block;
+      background: #37008f;
+      color: #ffffff;
+      padding: 18px 25px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.25s ease;
+    }
+
+    .publication-button:hover {
+      background: #240060;
+    }
+
+    /* EXPLORE MORE PROJECTS */
+
+    .ai-research-page .case-next {
+      width: 100%;
+      max-width: none;
+      border-top: 1px solid #dedede;
+      padding: 65px 6%;
+      margin: 0;
+    }
+
+    .explore-projects-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 700;
+      color: #111111;
+      text-decoration: none;
+    }
+
+    .explore-projects-link:hover {
+      color: #37008f;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      .research-artwork {
+        aspect-ratio: 4 / 3;
+      }
+
+      .research-insights {
+        padding: 55px 7%;
+      }
+
+      .insights-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .research-publication {
+        padding: 55px 7%;
+      }
+
+      .publication-panel {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 20px;
+      }
+
+      .publication-button {
+        text-align: center;
+        white-space: normal;
+      }
+
+    }
+
+    /* UPDATED RESEARCH INSIGHTS */
+
+.research-insights {
+  background: #ffffff;
+}
+
+.research-insights-heading h2 {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+  color: #37008f;
+}
+
+.research-insights-heading .case-category {
+  color: #37008f;
+}
+
+.insights-grid {
+  gap: 22px;
+}
+
+.insight-card {
+  background: #f7f5fa;
+  border: 1px solid #e6e1eb;
+  padding: 32px;
+  min-height: 310px;
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.insight-number {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: clamp(28px, 3.5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.insight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(55, 0, 143, 0.06);
+}
+
+/* SCROLL ANIMATION */
+
+@keyframes insightReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.insight-card.animate-in {
+  animation: insightReveal 0.8s ease both;
+}
+
+.insight-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.insight-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@media (max-width: 700px) {
+  .insight-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .insight-number {
+    font-size: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .insight-card.animate-in {
+    animation: none;
+  }
+
+  .insight-card {
+    transition: none;
+  }
+
+  .insight-card:hover {
+    transform: none;
+  }
+}
+
+  </style>
+
+</head>
+
+<body class="project-page ai-research-page">
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar" id="top">
+
+    <a href="../index.html" class="logo">
+      Patricia Frogoso
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="../work.html">WORK</a>
+      <a href="../about.html">ABOUT</a>
+      <a href="../resume.html">RESUME</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="case-hero">
+
+      <a href="../work.html" class="back-to-work">
+        ← BACK TO WORK
+      </a>
+
+      <div class="case-category">
+        TECHNOLOGY · INDEPENDENT RESEARCH
+      </div>
+
+      <h1>The Invisible Weight</h1>
+
+      <p class="case-subtitle">
+        What happens in the physical world when
+        we interact with artificial intelligence?
+      </p>
+
+    </section>
+
+    <!-- ARTWORK -->
+
+    <section class="research-artwork">
+
+      <img src="../assets/img/ai-research.png"
+        alt="Conceptual artwork exploring the physical weight of digital interactions">
+
+    </section>
+
+    <!-- RESEARCH OVERVIEW -->
+
+    <section class="case-editorial">
+
+      <div class="case-label">
+
+        <span>01 / OVERVIEW</span>
+
+        <h2>Digital Doesn't Mean Immaterial.</h2>
+
+      </div>
+
+      <div class="case-copy">
+
+        <p>
+          A search, a click, or a conversation with artificial
+          intelligence may feel effortless. Behind these
+          interactions, however, is a physical network of
+          processors, data centers, cooling systems,
+          and electrical infrastructure.
+        </p>
+
+        <p>
+          Through an independent study at the University
+          of Arkansas at Little Rock, I examined how Google
+          Search and ChatGPT shape user behavior and how
+          interface design may influence computing demand.
+          The research connects digital experience design
+          with the physical resources that make artificial
+          intelligence possible.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- KEY INSIGHTS -->
+
+    <section class="research-insights">
+
+      <div class="research-insights-heading">
+
+        <span class="case-category">
+          02 / KEY INSIGHTS
+        </span>
+
+        <h2>Putting Digital Demand Into Perspective.</h2>
+
+      </div>
+
+      <div class="insights-grid">
+
+        <article class="insight-card">
+
+          <span class="insight-number">8% vs. 15%</span>
+
+          <h3>Interfaces Shape Behavior</h3>
+
+          <p>
+            Pew Research Center found that users clicked
+            traditional search results less frequently
+            when an AI-generated summary appeared.
+          </p>
+
+        </article>
+
+        <article class="insight-card">
+
+          <span class="insight-number">2.6B</span>
+
+          <h3>Individual Interactions Add Up</h3>
+
+          <p>
+            ChatGPT received approximately 2.6 billion
+            messages per day in June 2025, illustrating
+            the scale at which individual digital
+            interactions accumulate.
+          </p>
+
+        </article>
+
+        <article class="insight-card">
+
+          <span class="insight-number">945 TWh</span>
+
+          <h3>Digital Demand Is Physical</h3>
+
+          <p>
+            The International Energy Agency projects
+            that global data center electricity
+            consumption could reach approximately
+            945 terawatt-hours in 2030.
+          </p>
+
+        </article>
+
+      </div>
+
+      <p class="insights-note">
+        Sources: Pew Research Center, NBER research on
+        ChatGPT usage, and the International Energy Agency.
+        These figures describe separate observations and
+        projections, not a measured causal relationship
+        between interface design and electricity demand.
+        Full references are included in the research paper.
+      </p>
+
+    </section>
+
+    <!-- PUBLICATION -->
+
+    <section class="research-publication">
+
+      <span class="case-category">
+        03 / PUBLICATION
+      </span>
+
+      <div class="publication-panel">
+
+        <div>
+
+          <span class="case-category">
+            INDEPENDENT STUDY · 2026
+          </span>
+
+          <h3>
+            How Google Search and ChatGPT Shape AI Use
+            and the AI Infrastructure Behind It
+          </h3>
+
+          <p>
+            University of Arkansas at Little Rock
+            · 27 pages · PDF
+          </p>
+
+        </div>
+
+        <a href="../assets/pdf/independent-study.pdf"
+          class="publication-button"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          READ FULL RESEARCH ↗
+
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- EXPLORE MORE -->
+
+    <section class="case-next">
+
+      <a href="../work.html" class="explore-projects-link">
+
+        <span>Explore More Projects</span>
+
+        <span aria-hidden="true">↗</span>
+
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer id="contact">
+
+    <h2>LET'S MAKE SOMETHING GREAT.</h2>
+
+    <div class="footer-links">
+
+      <a href="mailto:psfrogoso@ualr.edu">
+        EMAIL ME ↗
+      </a>
+
+      <a href="https://www.linkedin.com/in/patricia-frogoso1998/"
+        target="_blank" rel="noopener noreferrer">
+        LINKEDIN ↗
+      </a>
+
+      <a href="#top">BACK TO TOP ↑</a>
+
+    </div>
+
+    <p>© 2026 Patricia Frogoso</p>
+
+  </footer>
+
+  <script>
+  const insightCards = document.querySelectorAll(".insight-card");
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const formats = [
+    progress =>
+      `${Math.round(8 * progress)}% vs. ${Math.round(15 * progress)}%`,
+
+    progress =>
+      `${(2.6 * progress).toFixed(1)}B`,
+
+    progress =>
+      `${Math.round(945 * progress)} TWh`
+  ];
+
+  function animateNumber(element, format) {
+
+    const duration = 1800;
+    const start = performance.now();
+
+    function update(now) {
+
+      const progress = Math.min(
+        (now - start) / duration,
+        1
+      );
+
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      element.textContent = format(eased);
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+
+    }
+
+    requestAnimationFrame(update);
+
+  }
+
+  if (!reducedMotion && "IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          const card = entry.target;
+          const index = Array.from(insightCards).indexOf(card);
+          const number = card.querySelector(".insight-number");
+
+          card.classList.add("animate-in");
+
+          if (number && formats[index]) {
+            animateNumber(number, formats[index]);
+          }
+
+          observer.unobserve(card);
+
+        }
+
+      });
+
+    }, { threshold: 0.25 });
+
+    insightCards.forEach(card => observer.observe(card));
+
+  }
+</script>
+
+</body>
+</html>
