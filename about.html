@@ -373,7 +373,10 @@
       if (!card) return;
 
       const gap = parseFloat(getComputedStyle(track).gap) || 0;
-      const distance = card.getBoundingClientRect().width + gap;
+      const imagesPerScroll = window.innerWidth <= 700 ? 1 : 2;
+
+const distance =
+  (card.getBoundingClientRect().width + gap) * imagesPerScroll;
 
       track.scrollBy({
         left: direction * distance,

@@ -1,162 +1,284 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Patricia Frogoso | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 
 <body>
 
   <!-- NAVIGATION -->
-  <header class="navbar" id="top">
-    <a href="#top" class="logo">Patricia Frogoso</a>
 
-    <nav>
+  <header class="navbar" id="top">
+
+    <a href="index.html" class="logo">
+      Patricia Frogoso
+    </a>
+
+    <nav aria-label="Main navigation">
       <a href="work.html">WORK</a>
       <a href="about.html">ABOUT</a>
       <a href="resume.html">RESUME</a>
       <a href="#contact">CONTACT</a>
     </nav>
+
   </header>
+
 
   <main>
 
     <!-- HERO -->
+
     <section class="hero">
+
       <div class="hero-text">
+
         <h1>PATRICIA<br>FROGOSO</h1>
+
         <p>PRODUCT MARKETING · DIGITAL STRATEGY · DESIGN</p>
+
       </div>
 
       <div class="portrait">
-        <img src="assets/img/patty.jpg" alt="Patricia Frogoso">
+
+        <img
+          src="assets/img/patty.jpg"
+          alt="Patricia Frogoso">
+
       </div>
+
     </section>
 
 
-<!-- ABOUT PREVIEW -->
-<section class="about" id="about">
+    <!-- ABOUT PREVIEW -->
 
-  <h2>
-    HERE TO<br>
-    MAKE<br>
-    BIG IDEAS<br>
-    HAPPEN.
-  </h2>
+    <section class="about" id="about">
 
-  <div class="about-text">
+      <h2>
+        HERE TO<br>
+        MAKE<br>
+        BIG IDEAS<br>
+        HAPPEN.
+      </h2>
 
-    <p>
-      Hi, I'm Patricia! I've always loved a good story,
-      especially the kind that starts with a simple idea
-      and grows into something bigger than anyone imagined.
-    </p>
+      <div class="about-text">
 
-    <p>
-      My journey has taken me from helping grow my family's
-      restaurant to working in tech, design, and investment
-      product marketing at BlackRock. Along the way, I've
-      learned that the best ideas bring together people,
-      creativity, and a little courage.
-    </p>
+        <p>
+          Hi, I'm Patricia! I've always loved a good story,
+          especially the kind that starts with a simple idea
+          and grows into something bigger than anyone imagined.
+        </p>
 
-    <p>
-      Today, I'm bringing those experiences together through
-      my interest in financial services, technology, and
-      digital strategy.
-    </p>
+        <p>
+          My journey has taken me from helping grow my family's
+          restaurant to working in tech, design, and investment
+          product marketing at BlackRock. Along the way, I've
+          learned that the best ideas bring together people,
+          creativity, and a little courage.
+        </p>
 
-    <a href="about.html" class="read-more">
-      READ MY STORY <span aria-hidden="true">↗</span>
-    </a>
+        <p>
+          Today, I'm bringing those experiences together through
+          my interest in financial services, technology, and
+          digital strategy.
+        </p>
 
-  </div>
+        <a href="about.html" class="read-more">
+          READ MY STORY <span aria-hidden="true">↗</span>
+        </a>
 
-</section>
-
-    <!-- SELECTED WORK -->
-    <section class="work" id="work">
-      <h2 class="section-title">SNEAK PEEK OF MY<br>RECENT WORK</h2>
-
-      <!-- PROJECT 1 -->
-      <a href="https://www.blackrock.com/" class="project" target="_blank" rel="noopener">
-        <div class="project-image">
-          <img src="assets/img/ibonds-home.png" alt="BlackRock iBonds ETF Page">
-        </div>
-        <div class="project-info">
-          <h3>BLACKROCK</h3>
-          <p>Product Marketing · Financial Services ↗</p>
-        </div>
-      </a>
-
-      <!-- PROJECT 2 -->
-      <a href="https://liquidwealthblog.wordpress.com/" class="project reverse" target="_blank" rel="noopener">
-        <div class="project-image">
-          <img src="assets/img/liquid-wealth-home.png" alt="Liquid Wealth Blog">
-        </div>
-        <div class="project-info">
-          <h3>LIQUID WEALTH BLOG</h3>
-          <p>Financial Education · Digital Storytelling ↗</p>
-        </div>
-      </a>
-
-      <!-- PROJECT 3 -->
-      <div class="project">
-        <div class="project-image">
-          <img src="assets/img/jpmc-home.png" alt="History of JP Morgan">
-        </div>
-        <div class="project-info">
-          <h3>HISTORY OF JP MORGAN</h3>
-          <p>Web Design · Research</p>
-        </div>
       </div>
 
-      <!-- PROJECT 4 -->
-      
-<div class="project reverse">
-  <div class="project-image">
-    <img
-      src="assets/img/little-red-river-home.png"
-      alt="Little Red River Foundation website redesign">
-  </div>
+    </section>
 
-  <div class="project-info">
-    <h3>LITTLE RED RIVER FOUNDATION</h3>
-    <p>Web Development · Digital Strategy</p>
-  </div>
-</div>
+
+    <!-- SELECTED WORK -->
+
+    <section class="work" id="work">
+
+     <h2 class="section-title swipe-heading">
+  <span>SNEAK PEEK OF MY</span>
+  <span>RECENT WORK</span>
+</h2>
+
+
+      <!-- PROJECT 01: BLACKROCK -->
+
+      <a href="projects/blackrock.html" class="project">
+
+        <div class="project-image">
+
+          <img
+            src="assets/img/ibonds-home.png"
+            alt="BlackRock iBonds ETF page"
+            loading="lazy">
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>BLACKROCK</h3>
+
+          <p>
+            Product Marketing · Financial Services
+            <span aria-hidden="true">↗</span>
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 02: LIQUID WEALTH -->
+
+      <a href="projects/liquid-wealth.html" class="project reverse">
+
+        <div class="project-image">
+
+          <img
+            src="assets/img/liquid-wealth-home.png"
+            alt="Liquid Wealth financial education website"
+            loading="lazy">
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>LIQUID WEALTH</h3>
+
+          <p>
+            Financial Education · Digital Storytelling
+            <span aria-hidden="true">↗</span>
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 03: LITTLE RED RIVER FOUNDATION -->
+
+      <a href="projects/lrrf.html" class="project">
+
+        <div class="project-image">
+
+          <img
+            src="assets/img/little-red-river-home.png"
+            alt="Little Red River Foundation website redesign"
+            loading="lazy">
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>LITTLE RED RIVER FOUNDATION</h3>
+
+          <p>
+            Web Development · Digital Strategy
+            <span aria-hidden="true">↗</span>
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 04: JPMORGAN CHASE -->
+
+      <a href="projects/jpmc.html" class="project reverse">
+
+        <div class="project-image">
+
+          <img
+            src="assets/img/jpmc-home.png"
+            alt="JPMorgan Chase history website"
+            loading="lazy">
+
+        </div>
+
+        <div class="project-info">
+
+          <h3>HISTORY OF JPMORGAN CHASE</h3>
+
+          <p>
+            Web Design · Research
+            <span aria-hidden="true">↗</span>
+          </p>
+
+        </div>
+
+      </a>
+
+    </section>
+
 
     <!-- MORE PROJECTS CTA -->
+
     <section class="more-projects">
+
       <a href="work.html" class="more-projects-link">
+
         EXPLORE MORE PROJECTS
-        <span class="more-projects-arrow">↗</span>
+
+        <span class="more-projects-arrow" aria-hidden="true">
+          ↗
+        </span>
+
       </a>
+
     </section>
 
   </main>
 
+
   <!-- FOOTER -->
+
   <footer id="contact">
+
     <h2>LET'S MAKE SOMETHING GREAT.</h2>
 
     <div class="footer-links">
-      <a href="mailto:psfrogoso@ualr.edu">EMAIL ME ↗</a>
-      <a href="https://www.linkedin.com/in/patricia-frogoso1998/" target="_blank" rel="noopener">LINKEDIN ↗</a>
-      <a href="#top">BACK TO TOP ↑</a>
+
+      <a href="mailto:psfrogoso@ualr.edu">
+        EMAIL ME ↗
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/patricia-frogoso1998/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        LINKEDIN ↗
+
+      </a>
+
+      <a href="#top">
+        BACK TO TOP ↑
+      </a>
+
     </div>
 
     <p>© <span id="year">2026</span> Patricia Frogoso</p>
+
   </footer>
+
+
+  <!-- JAVASCRIPT -->
 
   <script src="script.js"></script>
   <script src="animations.js"></script>
+
 </body>
+
 </html>

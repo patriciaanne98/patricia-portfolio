@@ -1419,3 +1419,86 @@ footer p {
   object-fit: contain;
   background: #f5f3ef;
 }
+
+/* ========================================
+   HOMEPAGE — SCROLL SWIPE REVEAL
+======================================== */
+
+/* HOMEPAGE — SCROLL SWIPE REVEAL */
+
+.swipe-heading span {
+  display: block;
+  width: fit-content;
+}
+
+@keyframes swipeIn {
+  from {
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-40px);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0);
+  }
+}
+
+.swipe-heading.swipe-active span {
+  animation: swipeIn 2s ease-out both;
+}
+
+.swipe-heading.swipe-active span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swipe-heading.swipe-active span {
+    animation: none;
+  }
+}
+
+
+
+
+
+/* ==========================================
+   ABOUT — CONSISTENT SECTION HEADINGS
+========================================== */
+
+.about-page .about-section-heading h2 {
+  margin: 0 0 20px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.12;
+  color: #37008f;
+}
+
+/* Reduce excessive section spacing */
+
+.about-page .about-credentials {
+  padding: 80px 7% 40px;
+}
+
+.about-page .about-section-heading {
+  margin-bottom: 35px;
+}
+
+.about-page .about-scholarships {
+  padding: 40px 7% 80px;
+}
+
+/* Mobile spacing */
+
+@media (max-width: 700px) {
+
+  .about-page .about-credentials {
+    padding: 60px 7% 30px;
+  }
+
+  .about-page .about-scholarships {
+    padding: 30px 7% 60px;
+  }
+
+}
